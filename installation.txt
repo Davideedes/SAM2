@@ -9,6 +9,9 @@ pip install -r requirements.txt
 +torch manuell installieren mit dem Link, cuda version muss aber evtl angepasst werden -> Konfiguator unter: https://pytorch.org/
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 
+Modell Runterladen für Skript von root und das in checkpoints packen
+https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_tiny.pt
+
 
 Dann aus dem Ordner sam2 ein Skript starten mit:
 python -m erste_anwendung.Bild_hugging_face.py
