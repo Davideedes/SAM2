@@ -1,0 +1,11 @@
+In Ornder sam2 gehen 
+
+python -m venv .venv
+
+.venc\Scripts\activate
+
+pip install -r requirements.txt
+
++torch manuell installieren mit dem Link, cuda version muss aber evtl angepasst werden -> Konfiguator unter: https://pytorch.org/
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+
