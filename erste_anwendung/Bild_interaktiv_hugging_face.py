@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sam2.sam2_image_predictor import SAM2ImagePredictor
 
 # 2. Bild laden
-image_path = r"testbilder\CLXQ7779.JPG"
+image_path = r"testbilder\testschlagloch.JPG"
 image = Image.open(image_path).convert("RGB")
 image_np = np.array(image)
 

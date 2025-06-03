@@ -2,7 +2,7 @@ In Ornder sam2 gehen
 
 python -m venv .venv
 
-.venc\Scripts\activate
+.venv\Scripts\activate
 
 pip install -r requirements.txt
 

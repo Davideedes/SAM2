@@ -55,7 +55,14 @@ def show_anns(anns):
 # 8. Visualisierung
 plt.figure(figsize=(10, 10))
 plt.imshow(image_np)      # Originalbild anzeigen
-show_anns(masks)          # Masken als Overlay anzeigen
+show_anns(masks)  
+        # Masken als Overlay anzeigen
 plt.axis('off')
 plt.title("Automatisch generierte Masken")
 plt.show()
+
+# #save masks to png
+# output_path = "output_masks.png"
+# plt.imsave(output_path, img)  # Speichert die Masken als PNG
+# # Hinweis: Die Masken werden als RGBA-Bild gespeichert, wobei der Alpha-Kanal die Transparenz steuert.  
+
