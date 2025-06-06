@@ -5,6 +5,7 @@ python -m venv .venv
 .venv\Scripts\activate
 
 pip install -r requirements.txt
+--> für Linux/Macos User: pywin32==310 aus der requirements.txt raus, dann passt es 
 
 +torch manuell installieren mit dem Link, cuda version muss aber evtl angepasst werden -> Konfiguator unter: https://pytorch.org/
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
@@ -15,3 +16,8 @@ https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_tiny.pt
 
 Dann aus dem Ordner sam2 ein Skript starten mit:
 python -m erste_anwendung.Bild_hugging_face.py
+
+Für Linux/Macos:
+pywin32==310 aus der requirements.txt raus,
+ In erste_anwendung/Bild_hugging_face daran denken den \ zu / zu ändern
+ Skriptaufruf mit: python3 -m erste_anwendung.Bild_hugging_face
