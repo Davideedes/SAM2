@@ -9,6 +9,13 @@ from PIL import Image
 import numpy as np
 from sam2.sam2_image_predictor import SAM2ImagePredictor
 
+
+## to be able to display plt.show via terminal in linux -- maybe also MACOS?
+import matplotlib
+matplotlib.use("TkAgg") 
+########################################
+
+
 # 2. Bild laden
 # Das Bild wird von der Festplatte geladen und in ein RGB-Bild umgewandelt.
 image_path = r"testbilder/CLXQ7779.JPG"  # Pfad zum Eingabebild #########  LINUX/MACOS VERSION
