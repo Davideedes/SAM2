@@ -1,11 +1,40 @@
+ Florence2: 
+ Florence 2 braucht Python Version 3.10!!!! Deswegen: 
+ python3.10 -m venv .venv-florence
+source .venv-florence/bin/activate  # Linux/macOS
+source .venv-florence/Scripts/activate  # Windows
+ pip install --upgrade pip
+ pip install -r requirements-florence.txt
+
+ Falls torch install fehlschlägt: 
+ # Für CUDA 12.1 (GPU)
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+
+# Für CPU-only (falls nötig)
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu 
+
+So könnt ihr eure CUDA Treiber checken: nvidia-smi
+--> Jannik kp wie es bei dir ist, musste mal nachschauen 
+ 
+ 
+ SAM2:
 In Ornder sam2 gehen 
 
+(--> versucht am besten die requirements direkt in die gleiche venv reinzuladen!! Eine venv für alles halte ich für besser)
+
+ALSO NUR EVTL:
+(
 python -m venv .venv
-
 .venv\Scripts\activate
+)
 
-pip install -r requirements.txt
---> für Linux/Macos User: pywin32==310 aus der requirements.txt raus, dann passt es 
+
+Alle Packages reinladen: 
+pip install -r requirements-sam2.txt
+--> für Linux/Macos User: pywin32==310 aus der requirements.txt raus!!
+pip install -r requirements-florence2.txt
+--> Reihenfolge einhalten!!! Bei mir hat alles in die gleiche venv nur in dieser Reihenfolge funktioniert. 
+
 
 +torch manuell installieren mit dem Link, cuda version muss aber evtl angepasst werden -> Konfiguator unter: https://pytorch.org/
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
@@ -17,7 +46,14 @@ https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_tiny.pt
 Dann aus dem Ordner sam2 ein Skript starten mit:
 python -m erste_anwendung.Bild_hugging_face.py
 
+Florence 2 starten mit (vom SAM2 Ordner aus):
+python3 florence2/florence2.py   ## linux/macos
+python florence2/florence2.py    ## windows 
+
 Für Linux/Macos:
 pywin32==310 aus der requirements.txt raus,
  In erste_anwendung/Bild_hugging_face daran denken den \ zu / zu ändern
  Skriptaufruf mit: python3 -m erste_anwendung.Bild_hugging_face
+
+
+

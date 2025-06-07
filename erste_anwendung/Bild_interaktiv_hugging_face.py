@@ -37,16 +37,14 @@ def show_points(coords, labels, ax, marker_size=375):
         ax.scatter(neg_points[:, 0], neg_points[:, 1], color='#a020f0', marker='*', s=marker_size,
                    edgecolor='white', linewidth=1.25, label="Negativ")  # Lila
 
-# ...vorheriger Code bleibt...
-
 # 6. Interaktive Callback-Funktion
 clicked_points = []
 clicked_labels = []
-final_mask = None  # Hier speichern wir die finale Maske
 
 def on_click(event):
     if event.inaxes is not None:
         x, y = int(event.xdata), int(event.ydata)
+        # Linksklick = Vordergrund (grün), Rechtsklick = Hintergrund (lila)
         if event.button == 1:
             clicked_points.append([x, y])
             clicked_labels.append(1)
@@ -64,33 +62,19 @@ def on_click(event):
                 point_labels=input_label,
                 multimask_output=True,
             )
-        global final_mask
-        final_mask = masks[0]  # Beste Maske merken
+        # Visualisierung
         ax.clear()
         ax.imshow(image_np)
         show_mask(masks[0], ax)
         show_points(input_point, input_label, ax)
-        ax.set_title(f"{len(clicked_points)} Punkt(e) gesetzt (grün=+, lila=-)\nDrücke Enter zum Speichern")
+        ax.set_title(f"{len(clicked_points)} Punkt(e) gesetzt (grün=+, lila=-)")
         plt.axis('off')
         fig.canvas.draw()
 
-def on_key(event):
-    if event.key == "enter":
-        plt.close()  # Fenster schließen
-
-# 7. Bild anzeigen und auf Klicks/Enter warten
+# 7. Bild anzeigen und auf Klicks warten
 fig, ax = plt.subplots(figsize=(10, 10))
 ax.imshow(image_np)
-ax.set_title("Klicke ins Bild, um Punkte zu setzen\nDrücke Enter zum Speichern")
+ax.set_title("Klicke ins Bild, um einen Punkt zu setzen")
 plt.axis('off')
-fig.canvas.mpl_connect('button_press_event', on_click)
-fig.canvas.mpl_connect('key_press_event', on_key)
+cid = fig.canvas.mpl_connect('button_press_event', on_click)
 plt.show()
-
-# Nach der Interaktion: finale Maske speichern
-if final_mask is not None:
-    from PIL import Image as PILImage
-    mask_to_save = (final_mask > 0).astype(np.uint8) * 255
-    pil_mask = PILImage.fromarray(mask_to_save)
-    pil_mask.save(r"erste_anwendung/masks/finale_maske.png")
-    print("Finale Maske gespeichert als finale_maske.png")
