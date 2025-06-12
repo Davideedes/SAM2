@@ -1,5 +1,6 @@
 # 1. Bibliotheken importieren
 import torch
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
@@ -8,7 +9,10 @@ from sam2.sam2_video_predictor import SAM2VideoPredictor
 
 # 2. Video laden und in Frames umwandeln
 # Das Video wird mit OpenCV geöffnet und alle Frames werden als RGB-Bilder in eine Liste geladen.
-video_path = r"demo\data\gallery\01_dog_short.mp4"
+#video_path = r"demo\data\gallery\01_dog_short.mp4" ## Windoofs
+
+video_path = os.path.join("demo", "data", "gallery", "01_dog_short.mp4")
+
 cap = cv2.VideoCapture(video_path)
 frames = []
 while True:

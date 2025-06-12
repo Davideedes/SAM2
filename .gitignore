@@ -12,8 +12,6 @@ _C.*
 outputs/*
 checkpoints/*.pt
 demo/backend/checkpoints/*.pt
-.venv-f2py310
-.venv-sam-florence
 florence2-base/*
 florence2/florence2-base/*
 notebooks/videos

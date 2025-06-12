@@ -1,0 +1,318 @@
+2025-06-12 11:53:33,202  [INFO]  Starte Pipeline
+2025-06-12 11:53:33,202  [INFO]  Eingabebild: testbilder/CLXQ7779.JPG
+2025-06-12 11:53:39,778  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 11:53:40,066  [INFO]  SAM-2 Modell geladen
+2025-06-12 11:53:42,997  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 11:53:43,072  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 11:53:45,206  [INFO]  Image embeddings computed.
+2025-06-12 11:53:45,954  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 11:53:45,978  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 11:53:45,995  [INFO]  Image embeddings computed.
+2025-06-12 11:53:46,508  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 11:53:46,520  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 11:53:46,536  [INFO]  Image embeddings computed.
+2025-06-12 11:53:49,741  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 11:53:49,746  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 11:53:49,761  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 11:53:54,748  [INFO]  Florence-2 Modell geladen – beginne Klassifikation
+2025-06-12 11:53:58,756  [INFO]  Klassifikation: 
+2025-06-12 11:56:30,453  [INFO]  Starte Pipeline
+2025-06-12 11:56:30,453  [INFO]  Eingabebild: testbilder/CLXQ7779.JPG
+2025-06-12 11:56:34,560  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 11:56:34,783  [INFO]  SAM-2 Modell geladen
+2025-06-12 11:56:37,275  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 11:56:37,338  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 11:56:38,443  [INFO]  Image embeddings computed.
+2025-06-12 11:56:40,504  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 11:56:40,509  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 11:56:40,635  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 11:56:44,924  [INFO]  Florence-2 Modell geladen – beginne Klassifikation
+2025-06-12 11:56:46,851  [INFO]  Klassifikation: 
+2025-06-12 11:57:39,538  [INFO]  Starte Pipeline
+2025-06-12 11:57:39,538  [INFO]  Eingabebild: testbilder/CLXQ7779.JPG
+2025-06-12 11:57:43,592  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 11:57:43,793  [INFO]  SAM-2 Modell geladen
+2025-06-12 11:57:47,415  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 11:57:47,476  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 11:57:48,569  [INFO]  Image embeddings computed.
+2025-06-12 11:57:51,185  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 11:57:51,190  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 11:57:51,322  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 11:57:56,004  [INFO]  Florence-2 Modell geladen – beginne Klassifikation
+2025-06-12 11:57:56,005  [ERROR]  Fehler bei Florence-2:
+Traceback (most recent call last):
+  File "/home/dia/uni/BigData/sam2/pipeline/main_pipe.py", line 63, in run
+    answer = florence.classify(image_path, task_prompt="<VQA>", text_input="What animal is shown in the image?")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dia/uni/BigData/sam2/pipeline/florence2_module.py", line 40, in classify
+    inputs = self.processor(
+             ^^^^^^^^^^^^^^^
+  File "/home/dia/.cache/huggingface/modules/transformers_modules/microsoft/Florence-2-base/ceaf371f01ef66192264811b390bccad475a4f02/processing_florence2.py", line 250, in __call__
+    pixel_values = self.image_processor(
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dia/uni/BigData/sam2/.venv/lib/python3.12/site-packages/transformers/image_processing_utils.py", line 42, in __call__
+    return self.preprocess(images, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dia/uni/BigData/sam2/.venv/lib/python3.12/site-packages/transformers/models/clip/image_processing_clip.py", line 286, in preprocess
+    images = make_flat_list_of_images(images)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dia/uni/BigData/sam2/.venv/lib/python3.12/site-packages/transformers/image_utils.py", line 274, in make_flat_list_of_images
+    raise ValueError(f"Could not make a flat list of images from {images}")
+ValueError: Could not make a flat list of images from testbilder/CLXQ7779.JPG
+2025-06-12 12:09:55,221  [INFO]  Starte Pipeline
+2025-06-12 12:09:55,222  [INFO]  Eingabebild: testbilder/CLXQ7779.JPG
+2025-06-12 12:10:01,544  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 12:10:01,798  [INFO]  SAM-2 Modell geladen
+2025-06-12 12:10:33,626  [INFO]  Starte Pipeline
+2025-06-12 12:10:33,627  [INFO]  Eingabebild: testbilder/CLXQ7779.JPG
+2025-06-12 12:10:37,606  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 12:10:37,813  [INFO]  SAM-2 Modell geladen
+2025-06-12 12:10:41,602  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 12:10:41,680  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 12:10:44,002  [INFO]  Image embeddings computed.
+2025-06-12 12:10:45,644  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 12:10:45,648  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 12:10:45,792  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 12:10:51,861  [INFO]  Florence-2 Modell geladen – beginne Klassifikation
+2025-06-12 12:10:51,864  [ERROR]  Fehler bei Florence-2:
+Traceback (most recent call last):
+  File "/home/dia/uni/BigData/sam2/pipeline/main_pipe.py", line 63, in run
+    answer = florence.classify(image_path, task_prompt="<CAPTION>")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dia/uni/BigData/sam2/pipeline/florence2_module.py", line 40, in classify
+    inputs = self.processor(
+             ^^^^^^^^^^^^^^^
+  File "/home/dia/.cache/huggingface/modules/transformers_modules/microsoft/Florence-2-base/ceaf371f01ef66192264811b390bccad475a4f02/processing_florence2.py", line 250, in __call__
+    pixel_values = self.image_processor(
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dia/uni/BigData/sam2/.venv/lib/python3.12/site-packages/transformers/image_processing_utils.py", line 42, in __call__
+    return self.preprocess(images, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dia/uni/BigData/sam2/.venv/lib/python3.12/site-packages/transformers/models/clip/image_processing_clip.py", line 286, in preprocess
+    images = make_flat_list_of_images(images)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dia/uni/BigData/sam2/.venv/lib/python3.12/site-packages/transformers/image_utils.py", line 274, in make_flat_list_of_images
+    raise ValueError(f"Could not make a flat list of images from {images}")
+ValueError: Could not make a flat list of images from testbilder/CLXQ7779.JPG
+2025-06-12 12:14:25,738  [INFO]  Starte Pipeline
+2025-06-12 12:14:25,739  [INFO]  Eingabebild: testbilder/CLXQ7779.JPG
+2025-06-12 12:14:32,093  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 12:14:32,325  [INFO]  SAM-2 Modell geladen
+2025-06-12 12:14:36,576  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 12:14:36,650  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 12:14:39,022  [INFO]  Image embeddings computed.
+2025-06-12 12:14:41,464  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 12:14:41,469  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 12:14:41,599  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 12:14:46,805  [INFO]  Florence-2 Modell geladen – beginne Klassifikation
+2025-06-12 12:14:50,069  [INFO]  Klassifikation: 
+2025-06-12 12:16:11,761  [INFO]  Starte Pipeline
+2025-06-12 12:16:11,761  [INFO]  Eingabebild: testbilder/CLXQ7779.JPG
+2025-06-12 12:16:15,965  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 12:16:16,170  [INFO]  SAM-2 Modell geladen
+2025-06-12 12:16:19,869  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 12:16:19,947  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 12:16:21,124  [INFO]  Image embeddings computed.
+2025-06-12 12:16:22,811  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 12:16:22,815  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 12:16:22,949  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 12:16:27,645  [INFO]  Florence-2 Modell geladen – beginne Klassifikation
+2025-06-12 12:16:31,157  [INFO]  Klassifikation: {'<CAPTION>': 'A group of killer whales swimming in the ocean.'}
+2025-06-12 12:16:57,684  [INFO]  Starte Pipeline
+2025-06-12 12:16:57,685  [INFO]  Eingabebild: testbilder/CLXQ7779.JPG
+2025-06-12 12:17:01,745  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 12:17:01,954  [INFO]  SAM-2 Modell geladen
+2025-06-12 12:17:03,241  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 12:17:03,306  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 12:17:04,384  [INFO]  Image embeddings computed.
+2025-06-12 12:17:05,740  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 12:17:05,744  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 12:17:05,890  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 12:17:10,661  [INFO]  Florence-2 Modell geladen – beginne Klassifikation
+2025-06-12 12:17:12,887  [INFO]  Klassifikation: {'<CAPTION>': 'A couple of dolphins swimming in the ocean at night.'}
+2025-06-12 14:10:51,071  [INFO]  Starte Pipeline
+2025-06-12 14:10:51,072  [INFO]  Eingabebild: testbilder/CLXQ7779.JPG
+2025-06-12 14:10:55,723  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 14:10:55,931  [INFO]  SAM-2 Modell geladen
+2025-06-12 14:10:59,321  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 14:10:59,387  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 14:11:01,297  [INFO]  Image embeddings computed.
+2025-06-12 14:11:03,127  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 14:11:03,132  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 14:11:03,299  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 14:11:03,430  [INFO]  BBox-Overlay gespeichert  → erste_anwendung/bbox_overlay.png
+2025-06-12 14:11:03,440  [INFO]  Cropped-Region gespeichert → erste_anwendung/cropped_object.png
+2025-06-12 14:11:10,200  [INFO]  Florence-2 Modell geladen – beginne Klassifikation
+2025-06-12 14:11:13,682  [INFO]  Klassifikation: {'<CAPTION>': 'two killer whales swimming in the ocean'}
+2025-06-12 14:12:07,395  [INFO]  Starte Pipeline
+2025-06-12 14:12:07,395  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-12 14:12:12,250  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 14:12:12,539  [INFO]  SAM-2 Modell geladen
+2025-06-12 14:12:15,238  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 14:12:15,306  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 14:12:16,500  [INFO]  Image embeddings computed.
+2025-06-12 14:12:18,935  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 14:12:18,944  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 14:12:19,029  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 14:12:19,081  [INFO]  BBox-Overlay gespeichert  → erste_anwendung/bbox_overlay.png
+2025-06-12 14:12:19,119  [INFO]  Cropped-Region gespeichert → erste_anwendung/cropped_object.png
+2025-06-12 14:12:24,043  [INFO]  Florence-2 Modell geladen – beginne Klassifikation
+2025-06-12 14:12:25,927  [INFO]  Klassifikation: {'<CAPTION>': 'a dead bird on the ground next to a car - stock image'}
+2025-06-12 14:12:44,286  [INFO]  Starte Pipeline
+2025-06-12 14:12:44,286  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-12 14:12:51,299  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 14:12:51,519  [INFO]  SAM-2 Modell geladen
+2025-06-12 14:17:03,008  [INFO]  Starte Pipeline
+2025-06-12 14:17:03,008  [INFO]  Eingabebild: testbilder/CLXQ7779.JPG
+2025-06-12 14:17:07,351  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 14:17:07,620  [INFO]  SAM-2 Modell geladen
+2025-06-12 14:17:51,034  [INFO]  Starte Pipeline
+2025-06-12 14:17:51,035  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-12 14:17:55,081  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 14:17:55,290  [INFO]  SAM-2 Modell geladen
+2025-06-12 14:17:58,550  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 14:17:58,612  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 14:17:59,723  [INFO]  Image embeddings computed.
+2025-06-12 14:18:02,719  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 14:18:02,724  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 14:18:02,805  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 14:18:02,858  [INFO]  BBox-Overlay gespeichert  → erste_anwendung/bbox_overlay.png
+2025-06-12 14:18:02,891  [INFO]  Cropped-Region gespeichert → erste_anwendung/cropped_object.png
+2025-06-12 14:18:10,992  [INFO]  Florence-2 Modell geladen – beantworte Frage
+2025-06-12 14:18:12,967  [INFO]  Antwort: {'<VQA>': 'QA>Befindet sich in dem Bild ein Straßenloch<loc_530><loc_341><loc_774><loc_998>'}
+2025-06-12 14:20:02,889  [INFO]  Starte Pipeline
+2025-06-12 14:20:02,889  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-12 14:20:06,851  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 14:20:07,067  [INFO]  SAM-2 Modell geladen
+2025-06-12 14:20:10,273  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 14:20:10,338  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 14:20:11,465  [INFO]  Image embeddings computed.
+2025-06-12 14:20:13,680  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 14:20:13,685  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 14:20:13,771  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 14:20:13,826  [INFO]  BBox-Overlay gespeichert  → erste_anwendung/bbox_overlay.png
+2025-06-12 14:20:13,859  [INFO]  Cropped-Region gespeichert → erste_anwendung/cropped_object.png
+2025-06-12 14:20:19,824  [INFO]  Florence-2 Modell geladen – beantworte Frage
+2025-06-12 14:20:21,671  [INFO]  Antwort: {'<VQA>': 'QA>Befindet sich in dem Bild ein Straßenloch<loc_530><loc_252><loc_775><loc_998>'}
+2025-06-12 14:33:16,929  [INFO]  Starte Pipeline
+2025-06-12 14:33:16,929  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-12 14:33:21,231  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 14:33:21,517  [INFO]  SAM-2 Modell geladen
+2025-06-12 14:33:24,929  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 14:33:24,994  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 14:33:26,303  [INFO]  Image embeddings computed.
+2025-06-12 14:33:28,304  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 14:33:28,308  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 14:33:28,394  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 14:33:28,448  [INFO]  BBox-Overlay gespeichert  → erste_anwendung/bbox_overlay.png
+2025-06-12 14:33:28,478  [INFO]  Cropped-Region gespeichert → erste_anwendung/cropped_object.png
+2025-06-12 14:33:34,240  [INFO]  Florence-2 Modell geladen – beantworte Frage
+2025-06-12 14:33:34,241  [INFO]  Frage: Describe if the picture contains a road hole
+2025-06-12 14:33:36,972  [INFO]  Antwort: Describe if the picture contains a road hole.
+2025-06-12 14:38:11,664  [INFO]  Starte Pipeline
+2025-06-12 14:38:11,664  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-12 14:38:15,995  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 14:38:16,241  [INFO]  SAM-2 Modell geladen
+2025-06-12 14:38:20,738  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 14:38:20,803  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 14:38:21,952  [INFO]  Image embeddings computed.
+2025-06-12 14:38:24,298  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 14:38:24,302  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 14:38:24,380  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 14:38:24,434  [INFO]  BBox-Overlay gespeichert  → erste_anwendung/bbox_overlay.png
+2025-06-12 14:38:24,470  [INFO]  Cropped-Region gespeichert → erste_anwendung/cropped_object.png
+2025-06-12 14:38:28,869  [INFO]  Florence-2 Modell geladen – beantworte Frage
+2025-06-12 14:38:28,869  [INFO]  Frage: Describe if the picture contains a road hole
+2025-06-12 14:38:28,869  [ERROR]  Fehler bei Florence-2:
+Traceback (most recent call last):
+  File "/home/dia/uni/BigData/sam2/pipeline/main_pipe.py", line 81, in run
+    answer = florence.classify(
+             ^^^^^^^^^^^^^^^^^
+AttributeError: 'Florence2Classifier' object has no attribute 'classify'
+2025-06-12 14:40:28,163  [INFO]  Starte Pipeline
+2025-06-12 14:40:28,163  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-12 14:40:32,249  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 14:40:32,450  [INFO]  SAM-2 Modell geladen
+2025-06-12 14:40:37,070  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 14:40:37,135  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 14:40:38,376  [INFO]  Image embeddings computed.
+2025-06-12 14:40:40,787  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 14:40:40,791  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 14:40:40,878  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 14:40:40,929  [INFO]  BBox-Overlay gespeichert  → erste_anwendung/bbox_overlay.png
+2025-06-12 14:40:40,970  [INFO]  Cropped-Region gespeichert → erste_anwendung/cropped_object.png
+2025-06-12 14:40:45,163  [INFO]  Florence-2 Modell geladen – beantworte Frage
+2025-06-12 14:40:45,163  [INFO]  Frage: Describe if the picture contains a road hole
+2025-06-12 14:40:47,272  [INFO]  Antwort: {'<V': 'Describe if the picture contains a road hole.'}
+2025-06-12 14:52:18,011  [INFO]  Starte Pipeline
+2025-06-12 14:52:18,012  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-12 14:52:24,111  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 14:52:24,408  [INFO]  SAM-2 Modell geladen
+2025-06-12 14:52:26,898  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 14:52:26,973  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 14:52:29,077  [INFO]  Image embeddings computed.
+2025-06-12 14:52:30,934  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 14:52:30,941  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 14:52:31,014  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 14:52:31,064  [INFO]  BBox-Overlay gespeichert  → erste_anwendung/bbox_overlay.png
+2025-06-12 14:52:31,093  [INFO]  Cropped-Region gespeichert → erste_anwendung/cropped_object.png
+2025-06-12 14:52:36,158  [INFO]  Florence-2 Modell geladen – beantworte Frage
+2025-06-12 14:52:36,158  [INFO]  Frage: Describe if the picture contains a road hole
+2025-06-12 14:52:39,509  [INFO]  Antwort: Describe if the picture contains a road hole.
+2025-06-12 14:54:18,000  [INFO]  Starte Pipeline
+2025-06-12 14:54:18,001  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-12 14:54:24,164  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 14:54:24,400  [INFO]  SAM-2 Modell geladen
+2025-06-12 14:54:25,968  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 14:54:26,044  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 14:54:28,189  [INFO]  Image embeddings computed.
+2025-06-12 14:54:29,720  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 14:54:29,730  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 14:54:29,804  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 14:54:29,854  [INFO]  BBox-Overlay gespeichert  → erste_anwendung/bbox_overlay.png
+2025-06-12 14:54:29,887  [INFO]  Cropped-Region gespeichert → erste_anwendung/cropped_object.png
+2025-06-12 14:54:34,749  [INFO]  Florence-2 Modell geladen – beantworte Frage
+2025-06-12 14:54:34,749  [INFO]  Frage: Describe if the picture contains a road hole
+2025-06-12 14:54:34,749  [ERROR]  Fehler bei Florence-2:
+Traceback (most recent call last):
+  File "/home/dia/uni/BigData/sam2/pipeline/main_pipe.py", line 81, in run
+    answer = florence.classify(
+             ^^^^^^^^^^^^^^^^^
+AttributeError: 'Florence2Classifier' object has no attribute 'classify'
+2025-06-12 14:55:47,937  [INFO]  Starte Pipeline
+2025-06-12 14:55:47,937  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-12 14:55:51,953  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 14:55:52,199  [INFO]  SAM-2 Modell geladen
+2025-06-12 14:55:54,814  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 14:55:54,885  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 14:55:55,974  [INFO]  Image embeddings computed.
+2025-06-12 14:55:58,541  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 14:55:58,546  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 14:55:58,622  [INFO]  Overlay gespeichert     → erste_anwendung/masked_object.png
+2025-06-12 14:55:58,673  [INFO]  BBox-Overlay gespeichert  → erste_anwendung/bbox_overlay.png
+2025-06-12 14:55:58,707  [INFO]  Cropped-Region gespeichert → erste_anwendung/cropped_object.png
+2025-06-12 14:56:03,406  [INFO]  Florence-2 Modell geladen – beantworte Frage
+2025-06-12 14:56:03,406  [INFO]  Frage: Describe if the picture contains a road hole
+2025-06-12 14:56:06,540  [INFO]  Antwort: QA>Question:ribe if the picture contains a road hole.
+2025-06-12 15:12:09,824  [INFO]  Starte Pipeline
+2025-06-12 15:12:09,825  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-12 15:12:15,907  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 15:12:16,156  [INFO]  SAM-2 Modell geladen
+2025-06-12 15:12:19,617  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 15:12:19,689  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 15:12:21,992  [INFO]  Image embeddings computed.
+2025-06-12 15:12:23,601  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 15:12:23,609  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 15:12:30,088  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-12 15:12:33,491  [INFO]  Caption: a dead bird on the ground in front of a car - stock image
+2025-06-12 15:18:09,109  [INFO]  Starte Pipeline
+2025-06-12 15:18:09,110  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-12 15:18:16,362  [INFO]  Loaded checkpoint sucessfully
+2025-06-12 15:18:16,645  [INFO]  SAM-2 Modell geladen
+2025-06-12 15:18:18,749  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-12 15:18:18,822  [INFO]  Computing image embeddings for the provided image...
+2025-06-12 15:18:21,101  [INFO]  Image embeddings computed.
+2025-06-12 15:18:22,813  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-12 15:18:22,821  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-12 15:18:30,817  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-12 15:18:34,240  [INFO]  Caption: a car is parked on the side of the road with a pothole in the middle of it -

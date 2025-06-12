@@ -1,12 +1,14 @@
 # 1. Bibliotheken importieren
 import torch
+import os
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 from sam2.sam2_image_predictor import SAM2ImagePredictor
 
 # 2. Bild laden
-image_path = r"testbilder\testschlagloch.JPG"
+#image_path = os.path.join("testbilder", "testschlagloch.jpg")
+image_path = os.path.join("testbilder", "CLXQ7779.JPG")
 image = Image.open(image_path).convert("RGB")
 image_np = np.array(image)
 
@@ -37,11 +39,13 @@ def show_points(coords, labels, ax, marker_size=375):
         ax.scatter(neg_points[:, 0], neg_points[:, 1], color='#a020f0', marker='*', s=marker_size,
                    edgecolor='white', linewidth=1.25, label="Negativ")  # Lila
 
-# 6. Interaktive Callback-Funktion
+# 6. Interaktive Callback-Funktionen
 clicked_points = []
 clicked_labels = []
+final_mask = None  # Hier speichern wir die finale Maske
 
 def on_click(event):
+    global final_mask
     if event.inaxes is not None:
         x, y = int(event.xdata), int(event.ydata)
         # Linksklick = Vordergrund (grün), Rechtsklick = Hintergrund (lila)
@@ -62,19 +66,32 @@ def on_click(event):
                 point_labels=input_label,
                 multimask_output=True,
             )
-        # Visualisierung
+        final_mask = masks[0]  # Beste Maske merken
         ax.clear()
         ax.imshow(image_np)
         show_mask(masks[0], ax)
         show_points(input_point, input_label, ax)
-        ax.set_title(f"{len(clicked_points)} Punkt(e) gesetzt (grün=+, lila=-)")
+        ax.set_title(f"{len(clicked_points)} Punkt(e) gesetzt (grün=+, lila=-)\nDrücke Enter zum Speichern")
         plt.axis('off')
         fig.canvas.draw()
 
-# 7. Bild anzeigen und auf Klicks warten
+def on_key(event):
+    if event.key == "enter":
+        plt.close()  # Fenster schließen
+
+# 7. Bild anzeigen und auf Klicks/Enter warten
 fig, ax = plt.subplots(figsize=(10, 10))
 ax.imshow(image_np)
-ax.set_title("Klicke ins Bild, um einen Punkt zu setzen")
+ax.set_title("Klicke ins Bild, um Punkte zu setzen\nDrücke Enter zum Speichern")
 plt.axis('off')
-cid = fig.canvas.mpl_connect('button_press_event', on_click)
+fig.canvas.mpl_connect('button_press_event', on_click)
+fig.canvas.mpl_connect('key_press_event', on_key)
 plt.show()
+
+# Nach der Interaktion: finale Maske speichern
+if final_mask is not None:
+    from PIL import Image as PILImage
+    mask_to_save = (final_mask > 0).astype(np.uint8) * 255
+    pil_mask = PILImage.fromarray(mask_to_save)
+    pil_mask.save(r"erste_anwendung/masks/finale_maske.png")
+    print("Finale Maske gespeichert als finale_maske.png")

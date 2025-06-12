@@ -57,3 +57,4 @@ pywin32==310 aus der requirements.txt raus,
 
 
 
+pywin32==310
