@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <job>
+      <id>2549215</id>
+      <size>1</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2025-06-07 21:08:28.713514+00:00</created>
+      <updated>2025-06-09 09:54:12.870754+00:00</updated>
+      <subset>default</subset>
+      <start_frame>0</start_frame>
+      <stop_frame>0</stop_frame>
+      <frame_filter></frame_filter>
+      <segments>
+        <segment>
+          <id>2551496</id>
+          <start>0</start>
+          <stop>0</stop>
+          <url>https://app.cvat.ai/api/jobs/2549215</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>jaenixm</username>
+        <email>jannik8501@gmail.com</email>
+      </owner>
+      <assignee></assignee>
+      <labels>
+        <label>
+          <name>pothole</name>
+          <color>#fa32b7</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+    </job>
+    <dumped>2025-06-09 09:54:32.630443+00:00</dumped>
+  </meta>
+  <image id="0" name="214225630321486.jpg" width="5184" height="3888">
+    <polygon label="pothole" source="semi-auto" occluded="0" points="2203.00,2663.00;2203.00,2668.00;2217.00,2682.00;2240.00,2693.00;2260.00,2699.00;2295.00,2698.00;2319.00,2693.00;2340.00,2684.00;2343.00,2680.00;2344.00,2672.00;2341.00,2659.00;2331.00,2648.00;2318.00,2643.00;2284.00,2639.00;2267.00,2640.00;2237.00,2646.00;2220.00,2652.00" z_order="0">
+    </polygon>
+  </image>
+</annotations>
