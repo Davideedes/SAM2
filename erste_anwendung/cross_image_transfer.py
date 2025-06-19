@@ -7,12 +7,24 @@ from sam2.sam2_video_predictor import SAM2VideoPredictor
 
 # 1. Bilder als Frames laden und auf kleinste Auflösung bringen
 frame_paths = [
+    # 'Trainings'Bilder 
     os.path.join("testbilder", "Schlagloch1.jpeg"),
     os.path.join("testbilder", "Schlagloch2.jpeg"),
-    os.path.join("testbilder", "Schlagloch5.jpeg"),
+    os.path.join("testbilder", "Schlagloch8.jpeg"),
     os.path.join("testbilder", "Schlagloch3.jpeg"),
+    # Bilder zur klassifizierung
     os.path.join("testbilder", "Schlagloch4.jpeg"),
+    os.path.join("testbilder", "Schlagloch10.jpeg"),
     os.path.join("testbilder", "Schlagloch6.jpeg"),
+    # os.path.join("testbilder", "keinSchlagloch1.jpeg"),
+    # os.path.join("testbilder", "keinSchlagloch2.jpeg"),
+    # os.path.join("testbilder", "keinSchlagloch3.jpeg"),
+    # os.path.join("testbilder", "keinSchlagloch4.jpeg"),
+    # os.path.join("testbilder", "keinSchlagloch5.jpeg"),
+    # os.path.join("testbilder", "keinSchlagloch6.jpeg"),
+    os.path.join("testbilder", "Schlagloch7.jpeg"),
+    os.path.join("testbilder", "Schlagloch5.jpeg"),
+    os.path.join("testbilder", "Schlagloch9.jpeg"),
 ]
 
 # Lade alle Bilder und ermittle die kleinste Auflösung
