@@ -8,9 +8,7 @@ End-to-End-Ablauf:
 """
 
 # Aufrufbeispiel:
-#   python3 pipeline/main_pipeline.py \
-#           --image testbilder/CLXQ7779.JPG \
-#           --outdir erste_anwendung
+#python3 pipeline/main_pipe.py --image testbilder/CLXQ7779.JPG --outdir generated_masks
 # -----------------------------------------------------------
 
 import sys, pathlib, logging, time
@@ -70,14 +68,30 @@ def run(
     cropped_img     = sam.crop_bbox(image_np, bbox)
     cropped_img.save(outdir_path / "cropped_object.png")
 
-    # ---------- 2) Florence-2 Caption --------------------------------
-    florence = Florence2Classifier()
-    log.info("Florence-2 Modell geladen – generiere Caption")
+    # … unverändert bis zum Florence-Teil …
 
+    # ---------- 2) Florence-2 Analyse --------------------------------
+    florence = Florence2Classifier()
+    log.info("Florence-2 Modell geladen – prüfe Pothole + Caption")
+
+    # ---- 2a) Pothole-Check  (NEU) -----------------------------------
+    has_pothole, detections = florence.detect_pothole(orig_img_pil)
+    if has_pothole:
+        log.info(f"POTHOLE DETECTED  →  {len(detections)} Treffer")
+    else:
+        log.info("Kein Schlagloch gefunden")
+
+    # optional: BBox-Overlay für bestes Ergebnis abspeichern
+    if detections:
+        best_box, best_score = max(detections, key=lambda x: x[1])
+        pothole_overlay = sam.draw_bbox_on_image(orig_img_pil, best_box, color="yellow")
+        pothole_overlay.save(outdir_path / "pothole_overlay.png")
+
+    # ---- 2b) Caption  (wie gehabt) ----------------------------------
     try:
         caption = florence.classify(
-            image       = orig_img_pil,
-            task_prompt = "<CAPTION>",   #  ← wieder CAPTION-Modus
+            image       = cropped_img,
+            task_prompt = "<DETAILED_CAPTION>",
             text_input  = None,
         )
         log.info(f"Caption: {caption}")
@@ -85,12 +99,14 @@ def run(
         log.exception("Fehler bei Florence-2")
         caption = "<FEHLER>"
 
-    # ---------- Abschluss --------------------------------------------
-    dur = time.time() - t0
+# ---------- Abschluss-Print -------------------------------------------------
     print("\n🖼  Florence-2 Caption :", caption)
-    print("Maske   :", mask_path)
-    print("Overlay :", outdir_path / 'masked_object.png')
-    print(f"Pipeline-Laufzeit: {dur:0.1f}s")
+    print("🚧 Pothole erkannt   :", has_pothole)
+    if has_pothole:
+        print("BBox-Overlay        :", outdir_path / 'pothole_overlay.png')
+    print("Maske               :", mask_path)
+    print("Mask-Overlay        :", outdir_path / 'masked_object.png')
+
 
 # ────────────────────────── CLI ──────────────────────────────
 if __name__ == "__main__":

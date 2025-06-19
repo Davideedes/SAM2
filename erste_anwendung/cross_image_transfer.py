@@ -137,3 +137,58 @@ for idx in range(n_frames):
     plt.show()
 
 shutil.rmtree(tmpdir)
+
+
+
+# 8. Masks als kontextreiche Bounding-Box-Crops speichern  -----------------
+out_dir = os.path.join("testbilder", "masken_ctx")
+os.makedirs(out_dir, exist_ok=True)
+
+context_ratio = 0.25   # 100 % extra Rand (= Boxfläche verdoppeln)
+min_side      = 128   # garantiert mind. 256 px Breite/Höhe
+
+for idx in range(n_frames):
+    mask = video_segments.get(idx, {}).get(1)
+    if mask is None:
+        continue
+
+    # --- 2-D Maske (Vereinigung aller Hypothesen) ------------------------
+    if mask.ndim == 3:
+        mask2d = np.any(mask, axis=0)
+    else:
+        mask2d = mask
+    if not mask2d.any():
+        continue
+
+    # --- Bounding Box ----------------------------------------------------
+    ys, xs = np.where(mask2d)
+    x_min, x_max = xs.min(), xs.max()
+    y_min, y_max = ys.min(), ys.max()
+    box_w, box_h = x_max - x_min, y_max - y_min
+
+    # --- Kontext + Mindestgröße -----------------------------------------
+    # 1) prozentual erweitern
+    pad_w = int(box_w * context_ratio / 2)   # /2: links + rechts
+    pad_h = int(box_h * context_ratio / 2)   # /2: oben + unten
+
+    # 2) Mindest-Seitenlänge absichern
+    box_w_ext = box_w + 2 * pad_w
+    box_h_ext = box_h + 2 * pad_h
+    if box_w_ext < min_side:
+        extra = (min_side - box_w_ext) // 2
+        pad_w += extra
+    if box_h_ext < min_side:
+        extra = (min_side - box_h_ext) // 2
+        pad_h += extra
+
+    H, W = mask2d.shape
+    x_min = max(0, x_min - pad_w)
+    y_min = max(0, y_min - pad_h)
+    x_max = min(W - 1, x_max + pad_w)
+    y_max = min(H - 1, y_max + pad_h)
+
+    # --- Crop & speichern ------------------------------------------------
+    crop = frames[idx][y_min:y_max + 1, x_min:x_max + 1]
+    out_path = os.path.join(out_dir, f"frame_{idx:05d}.png")
+    Image.fromarray(crop).save(out_path)
+    print(f"Gespeichert: {out_path}  ({crop.shape[1]}×{crop.shape[0]})")

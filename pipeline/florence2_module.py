@@ -1,11 +1,12 @@
+# florence2_module.py
 """
-florence2_module.py
-~~~~~~~~~~~~~~~~~~~
-Wrapper um Microsoft Florence-2 für Caption- und (rudimentäres) VQA-Inference.
+Wrapper um Microsoft Florence 2 – jetzt mit robuster Pothole‑Detection.
+• <CAPTION>, <DETAILED_CAPTION>
+• <OPEN_VOCABULARY_DETECTION>
+• detect_pothole():  Synonym‑Liste, Score‑Fallback = 1.0, Debug‑Logging
 """
-
 from __future__ import annotations
-import os, re
+import os, json
 from typing import Literal
 
 import torch
@@ -24,50 +25,87 @@ class Florence2Classifier:
             os.environ.setdefault("DISABLE_FLASH_ATTN", "1")
 
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
-        self.processor = AutoProcessor.from_pretrained(model_id,
-                                                       trust_remote_code=True)
-        self.model = (AutoModelForCausalLM
-                      .from_pretrained(model_id, trust_remote_code=True)
-                      .to(self.device)
-                      .eval())
+        self.processor = AutoProcessor.from_pretrained(model_id, trust_remote_code=True)
+        self.model = (
+            AutoModelForCausalLM
+            .from_pretrained(model_id, trust_remote_code=True, torch_dtype=torch.float16)
+            .to(self.device)
+            .eval()
+        )
 
-    # ────────────────────────────── API ─────────────────────────────
+    # ────────────────────────────── Generische Inference ──────────────────────────────
     def classify(
         self,
         image: Image.Image,
-        task_prompt: Literal["<CAPTION>", "<VQA>"] = "<CAPTION>",
+        task_prompt: Literal[
+            "<CAPTION>",
+            "<DETAILED_CAPTION>",
+            "<OPEN_VOCABULARY_DETECTION>",
+        ] = "<CAPTION>",
         text_input: str | None = None,
-    ) -> str:
-        # -------- Prompt bauen --------------------------------------
-        if task_prompt == "<CAPTION>":
-            prompt = "<CAPTION>"
-        elif task_prompt == "<VQA>":
+        max_tokens: int = 128,
+    ):
+        if task_prompt in ("<CAPTION>", "<DETAILED_CAPTION>"):
+            prompt = task_prompt
+        elif task_prompt == "<OPEN_VOCABULARY_DETECTION>":
             if text_input is None:
-                raise ValueError("Für <VQA> muss text_input gesetzt sein.")
-            prompt = f"<VQA>Question:{text_input.rstrip('?')}? Answer:"
+                raise ValueError("Für <OPEN_VOCABULARY_DETECTION> text_input angeben!")
+            prompt = task_prompt + text_input
         else:
-            raise ValueError("Unbekannter task_prompt")
+            raise ValueError(f"Unbekannter task_prompt: {task_prompt}")
 
-        # -------- Inference -----------------------------------------
-        inputs = self.processor(text=prompt,
-                                images=image,
-                                return_tensors="pt"
-                               ).to(self.device, dtype=self.model.dtype)
-
+        inputs = self.processor(text=prompt, images=image, return_tensors="pt").to(
+            self.device, dtype=self.model.dtype
+        )
         with torch.inference_mode():
             gen_ids = self.model.generate(
-                **inputs,
-                max_new_tokens=32,
-                do_sample=False,
-                num_beams=3,
+                **inputs, max_new_tokens=max_tokens, do_sample=False, num_beams=3
             )
+        raw_txt = self.processor.batch_decode(gen_ids, skip_special_tokens=False)[0]
 
-        raw = self.processor.batch_decode(gen_ids,
-                                          skip_special_tokens=True)[0]
+        if task_prompt == "<OPEN_VOCABULARY_DETECTION>":
+            det = self.processor.post_process_generation(
+                raw_txt,
+                task=task_prompt,
+                image_size=(image.width, image.height),
+            )["<OPEN_VOCABULARY_DETECTION>"]
+            return det  # dict mit bboxes / labels / scores
+        return raw_txt.strip()
 
-        if task_prompt == "<VQA>":
-            ans = raw.split("Answer:")[-1].strip()
-            return re.sub(r"<loc_\d+>", "", ans).strip()
+    # ────────────────────────────── Pothole‑Detection ──────────────────────────────
+    def detect_pothole(
+        self,
+        image: Image.Image,
+        synonyms: str | None = None,
+        score_thr: float = 0.45,
+        debug: bool = False,
+    ) -> tuple[bool, list[tuple[list[int], float]]]:
+        """Liefert (has_pothole, [(bbox, score), …]).
+        * Fehlen Scores, wird 1.0 angenommen (Zero‑Shot‑Fallback).
+        * Nur Labels, die zu den Synonymen passen, werden gewertet.
+        """
+        query = synonyms or (
+            "pothole, road pothole, road hole, hole in the road, sinkhole, damaged asphalt"
+        )
+        syn_list = [s.strip().lower() for s in query.split(",")]
 
-        # CAPTION
-        return raw.strip()
+        det = self.classify(
+            image=image,
+            task_prompt="<OPEN_VOCABULARY_DETECTION>",
+            text_input=query,
+            max_tokens=256,
+        )
+        if debug:
+            print("[Florence‑DEBUG] raw detection\n" + json.dumps(det, indent=2))
+
+        bboxes = det.get("bboxes", [])
+        labels = [lbl.lower() for lbl in det.get("labels", [])]
+        scores_raw = det.get("scores")
+        scores = scores_raw if scores_raw else [1.0] * len(bboxes)
+
+        results, has_pothole = [], False
+        for bbox, lbl, scr in zip(bboxes, labels, scores):
+            if any(syn in lbl for syn in syn_list):
+                results.append((bbox, scr))
+                has_pothole |= scr >= score_thr
+        return has_pothole, results
