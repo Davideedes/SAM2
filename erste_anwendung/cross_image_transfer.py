@@ -140,7 +140,7 @@ def run_cross_image_transfer(n_train, model_size, seq_folder):
 # Beispiel-Aufruf:
 if __name__ == "__main__":
     run_cross_image_transfer(
-        n_train=3,  # z.B. 3 Trainingsbilder
+        n_train=6,  # z.B. 3 Trainingsbilder
         model_size="tiny",  # tiny, small, base_plus, large
         seq_folder="seq\seq_meister_bertram_strasse"  # <--- hier deinen Sequenzordner angeben!
     )
