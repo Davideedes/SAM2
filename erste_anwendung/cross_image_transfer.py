@@ -3,8 +3,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 import tempfile, os, shutil
-from sam2.sam2_video_predictor import SAM2VideoPredictor
+import sys
 from matplotlib.widgets import Button
+import optparse
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from sam2.sam2_video_predictor import SAM2VideoPredictor
+
 
 def run_cross_image_transfer(n_train, model_size, seq_folder):
     # Trainingsbilder und zugehörige Masken
@@ -142,5 +146,5 @@ if __name__ == "__main__":
     run_cross_image_transfer(
         n_train=6,  # z.B. 3 Trainingsbilder
         model_size="tiny",  # tiny, small, base_plus, large
-        seq_folder="seq\seq_meister_bertram_strasse"  # <--- hier deinen Sequenzordner angeben!
+        seq_folder=os.path.join("seq", "seq_meister_bertram_strasse")
     )
