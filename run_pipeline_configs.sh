@@ -10,7 +10,7 @@ echo "Starte Experimente am $(date)" | tee -a "$LOGFILE"
 
 # Modelgrößen in Reihenfolge
 for model_size in tiny small large; do
-    for n_train in {1..10}; do
+    for n_train in {1..6}; do
         echo "----------------------------------------" | tee -a "$LOGFILE"
         echo "⏱️  $(date): Modell: $model_size | Trainingsbilder: $n_train" | tee -a "$LOGFILE"
         
