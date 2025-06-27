@@ -316,3 +316,1064 @@ AttributeError: 'Florence2Classifier' object has no attribute 'classify'
 2025-06-12 15:18:22,821  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
 2025-06-12 15:18:30,817  [INFO]  Florence-2 Modell geladen – generiere Caption
 2025-06-12 15:18:34,240  [INFO]  Caption: a car is parked on the side of the road with a pothole in the middle of it -
+2025-06-19 10:44:04,417  [INFO]  Starte Pipeline
+2025-06-19 10:44:04,417  [INFO]  Eingabebild: testbilder/CLXQ7779.JPG
+2025-06-19 10:44:10,712  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 10:44:10,974  [INFO]  SAM-2 Modell geladen
+2025-06-19 10:44:13,915  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:44:14,001  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:44:16,729  [INFO]  Image embeddings computed.
+2025-06-19 10:44:18,911  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 10:44:18,915  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 10:44:30,553  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 10:44:35,309  [INFO]  Caption: A group of killer whales swimming in the ocean.
+2025-06-19 10:44:54,069  [INFO]  Starte Pipeline
+2025-06-19 10:44:54,070  [INFO]  Eingabebild: testbilder/PipeBild1.JPG
+2025-06-19 10:45:02,094  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 10:45:02,333  [INFO]  SAM-2 Modell geladen
+2025-06-19 10:45:17,199  [INFO]  Starte Pipeline
+2025-06-19 10:45:17,199  [INFO]  Eingabebild: testbilder/PipeBild1.jpg
+2025-06-19 10:45:22,727  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 10:45:22,941  [INFO]  SAM-2 Modell geladen
+2025-06-19 10:45:27,697  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:45:27,793  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:45:29,220  [INFO]  Image embeddings computed.
+2025-06-19 10:45:38,872  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 10:45:38,885  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 10:45:45,294  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 10:45:47,997  [INFO]  Caption: A red car driving down a street next to tall buildings.
+2025-06-19 10:47:04,448  [INFO]  Starte Pipeline
+2025-06-19 10:47:04,448  [INFO]  Eingabebild: testbilder/PipeBild2.jpg
+2025-06-19 10:47:08,920  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 10:47:09,143  [INFO]  SAM-2 Modell geladen
+2025-06-19 10:47:28,641  [INFO]  Starte Pipeline
+2025-06-19 10:47:28,641  [INFO]  Eingabebild: testbilder/PipeBild3.jpg
+2025-06-19 10:47:32,826  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 10:47:33,026  [INFO]  SAM-2 Modell geladen
+2025-06-19 10:47:45,437  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:47:45,510  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:47:46,739  [INFO]  Image embeddings computed.
+2025-06-19 10:47:53,517  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 10:47:53,527  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 10:47:57,909  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 10:47:59,964  [INFO]  Caption: A view of a street with cars parked on the side of it.
+2025-06-19 10:48:15,375  [INFO]  Starte Pipeline
+2025-06-19 10:48:15,375  [INFO]  Eingabebild: testbilder/PipeBild4.jpg
+2025-06-19 10:48:20,699  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 10:48:21,024  [INFO]  SAM-2 Modell geladen
+2025-06-19 10:48:27,653  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:48:27,741  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:48:28,955  [INFO]  Image embeddings computed.
+2025-06-19 10:48:52,123  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:48:52,168  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:48:52,190  [INFO]  Image embeddings computed.
+2025-06-19 10:48:53,428  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 10:48:53,459  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 10:48:58,872  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 10:49:00,902  [INFO]  Caption: A view from inside a car of a busy street.
+2025-06-19 10:49:40,936  [INFO]  Starte Pipeline
+2025-06-19 10:49:40,936  [INFO]  Eingabebild: testbilder/PipeBild4.jpg
+2025-06-19 10:49:44,881  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 10:49:45,146  [INFO]  SAM-2 Modell geladen
+2025-06-19 10:49:50,997  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:49:51,079  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:49:52,315  [INFO]  Image embeddings computed.
+2025-06-19 10:49:58,494  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 10:49:58,517  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 10:50:03,185  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 10:50:05,159  [INFO]  Caption: A view from the inside of a car driving down a street.
+2025-06-19 10:52:01,901  [INFO]  Starte Pipeline
+2025-06-19 10:52:01,901  [INFO]  Eingabebild: testbilder/PipeBild4.jpg
+2025-06-19 10:52:05,884  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 10:52:06,078  [INFO]  SAM-2 Modell geladen
+2025-06-19 10:52:09,071  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:52:09,143  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:52:10,190  [INFO]  Image embeddings computed.
+2025-06-19 10:52:12,570  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 10:52:12,593  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 10:52:17,613  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 10:52:19,251  [INFO]  Caption: A view from the inside of a car driving down a street.
+2025-06-19 10:56:00,133  [INFO]  Starte Pipeline
+2025-06-19 10:56:00,134  [INFO]  Eingabebild: testbilder/PipeBild4.jpg
+2025-06-19 10:56:04,215  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 10:56:04,415  [INFO]  SAM-2 Modell geladen
+2025-06-19 10:56:08,662  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:56:08,740  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:56:09,896  [INFO]  Image embeddings computed.
+2025-06-19 10:59:25,257  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:25,292  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:25,308  [INFO]  Image embeddings computed.
+2025-06-19 10:59:26,064  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:26,084  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:26,100  [INFO]  Image embeddings computed.
+2025-06-19 10:59:26,584  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:26,606  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:26,622  [INFO]  Image embeddings computed.
+2025-06-19 10:59:27,101  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:27,121  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:27,137  [INFO]  Image embeddings computed.
+2025-06-19 10:59:27,613  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:27,631  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:27,647  [INFO]  Image embeddings computed.
+2025-06-19 10:59:28,135  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:28,155  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:28,169  [INFO]  Image embeddings computed.
+2025-06-19 10:59:28,649  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:28,668  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:28,683  [INFO]  Image embeddings computed.
+2025-06-19 10:59:29,159  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:29,175  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:29,190  [INFO]  Image embeddings computed.
+2025-06-19 10:59:29,821  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 10:59:29,837  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 10:59:35,092  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 10:59:37,280  [INFO]  Caption: A group of cars driving down a street next to a bridge.
+2025-06-19 10:59:44,356  [INFO]  Starte Pipeline
+2025-06-19 10:59:44,356  [INFO]  Eingabebild: testbilder/PipeBild4.jpg
+2025-06-19 10:59:49,257  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 10:59:49,474  [INFO]  SAM-2 Modell geladen
+2025-06-19 10:59:51,246  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:51,329  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:53,288  [INFO]  Image embeddings computed.
+2025-06-19 10:59:54,267  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:54,300  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:54,320  [INFO]  Image embeddings computed.
+2025-06-19 10:59:54,806  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:54,826  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:54,841  [INFO]  Image embeddings computed.
+2025-06-19 10:59:55,481  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:55,504  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:55,521  [INFO]  Image embeddings computed.
+2025-06-19 10:59:56,116  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:56,137  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:56,153  [INFO]  Image embeddings computed.
+2025-06-19 10:59:56,652  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:56,678  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:56,707  [INFO]  Image embeddings computed.
+2025-06-19 10:59:57,181  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:57,201  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:57,217  [INFO]  Image embeddings computed.
+2025-06-19 10:59:57,698  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:57,716  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:57,737  [INFO]  Image embeddings computed.
+2025-06-19 10:59:58,236  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:58,258  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:58,273  [INFO]  Image embeddings computed.
+2025-06-19 10:59:58,754  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:58,771  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:58,788  [INFO]  Image embeddings computed.
+2025-06-19 10:59:59,265  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:59,285  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:59,301  [INFO]  Image embeddings computed.
+2025-06-19 10:59:59,791  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 10:59:59,814  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 10:59:59,829  [INFO]  Image embeddings computed.
+2025-06-19 11:00:00,323  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:00:00,349  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:00:00,365  [INFO]  Image embeddings computed.
+2025-06-19 11:00:00,840  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:00:00,862  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:00:00,878  [INFO]  Image embeddings computed.
+2025-06-19 11:00:01,365  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:00:01,390  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:00:01,416  [INFO]  Image embeddings computed.
+2025-06-19 11:00:01,892  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:00:01,919  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:00:01,935  [INFO]  Image embeddings computed.
+2025-06-19 11:00:02,441  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:00:02,464  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:00:02,480  [INFO]  Image embeddings computed.
+2025-06-19 11:00:02,960  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:00:02,981  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:00:03,001  [INFO]  Image embeddings computed.
+2025-06-19 11:00:03,475  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:00:03,496  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:00:03,511  [INFO]  Image embeddings computed.
+2025-06-19 11:00:03,996  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:00:04,018  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:00:04,033  [INFO]  Image embeddings computed.
+2025-06-19 11:00:11,792  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:00:11,809  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:00:16,839  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 11:00:19,012  [INFO]  Caption: A group of cars driving down a street next to a bridge.
+2025-06-19 11:01:28,847  [INFO]  Starte Pipeline
+2025-06-19 11:01:28,847  [INFO]  Eingabebild: testbilder/PipeBild4.jpg
+2025-06-19 11:01:32,782  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:01:32,979  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:01:35,848  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:01:35,919  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:01:37,028  [INFO]  Image embeddings computed.
+2025-06-19 11:01:37,820  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:01:37,855  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:01:37,876  [INFO]  Image embeddings computed.
+2025-06-19 11:01:38,615  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:01:38,631  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:01:38,647  [INFO]  Image embeddings computed.
+2025-06-19 11:01:40,664  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:01:40,690  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:01:40,705  [INFO]  Image embeddings computed.
+2025-06-19 11:01:42,802  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:01:42,825  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:01:42,843  [INFO]  Image embeddings computed.
+2025-06-19 11:01:45,720  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:01:45,746  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:01:45,763  [INFO]  Image embeddings computed.
+2025-06-19 11:01:47,715  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:01:47,735  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:01:47,754  [INFO]  Image embeddings computed.
+2025-06-19 11:01:54,505  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:01:54,525  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:01:59,021  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 11:02:00,615  [INFO]  Caption: A group of cars driving down a street next to a bridge.
+2025-06-19 11:02:36,330  [INFO]  Starte Pipeline
+2025-06-19 11:02:36,331  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-19 11:02:40,322  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:02:40,526  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:03:31,417  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:31,482  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:32,765  [INFO]  Image embeddings computed.
+2025-06-19 11:03:33,427  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:33,452  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:33,467  [INFO]  Image embeddings computed.
+2025-06-19 11:03:33,972  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:33,983  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:33,999  [INFO]  Image embeddings computed.
+2025-06-19 11:03:34,418  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:34,428  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:34,444  [INFO]  Image embeddings computed.
+2025-06-19 11:03:36,571  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:36,586  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:36,602  [INFO]  Image embeddings computed.
+2025-06-19 11:03:42,474  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:42,492  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:42,508  [INFO]  Image embeddings computed.
+2025-06-19 11:03:45,053  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:45,068  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:45,088  [INFO]  Image embeddings computed.
+2025-06-19 11:03:47,252  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:47,263  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:47,280  [INFO]  Image embeddings computed.
+2025-06-19 11:03:48,878  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:48,892  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:48,924  [INFO]  Image embeddings computed.
+2025-06-19 11:03:50,206  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:50,221  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:50,237  [INFO]  Image embeddings computed.
+2025-06-19 11:03:51,511  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:51,526  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:51,541  [INFO]  Image embeddings computed.
+2025-06-19 11:03:52,730  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:52,742  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:52,757  [INFO]  Image embeddings computed.
+2025-06-19 11:03:53,448  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:53,459  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:53,475  [INFO]  Image embeddings computed.
+2025-06-19 11:03:53,967  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:53,976  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:53,992  [INFO]  Image embeddings computed.
+2025-06-19 11:03:54,416  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:54,429  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:54,444  [INFO]  Image embeddings computed.
+2025-06-19 11:03:58,148  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:58,162  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:58,178  [INFO]  Image embeddings computed.
+2025-06-19 11:03:59,633  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:03:59,644  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:03:59,659  [INFO]  Image embeddings computed.
+2025-06-19 11:04:00,991  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:04:01,007  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:04:01,024  [INFO]  Image embeddings computed.
+2025-06-19 11:04:04,017  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:04:04,020  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:04:08,504  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 11:04:10,118  [INFO]  Caption: a moth on the ground
+2025-06-19 11:04:22,827  [INFO]  Starte Pipeline
+2025-06-19 11:04:22,827  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-19 11:04:28,753  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:04:28,967  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:04:33,349  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:04:33,412  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:04:34,601  [INFO]  Image embeddings computed.
+2025-06-19 11:04:35,327  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:04:35,352  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:04:35,367  [INFO]  Image embeddings computed.
+2025-06-19 11:04:35,877  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:04:35,890  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:04:35,906  [INFO]  Image embeddings computed.
+2025-06-19 11:04:36,325  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:04:36,334  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:04:36,349  [INFO]  Image embeddings computed.
+2025-06-19 11:04:38,102  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:04:38,116  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:04:38,132  [INFO]  Image embeddings computed.
+2025-06-19 11:04:42,978  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:04:42,981  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:04:47,343  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 11:04:49,281  [INFO]  Caption: a moth on the ground
+2025-06-19 11:06:41,165  [INFO]  Starte Pipeline
+2025-06-19 11:06:41,165  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-19 11:06:45,147  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:06:45,346  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:07:54,867  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:07:54,933  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:07:56,267  [INFO]  Image embeddings computed.
+2025-06-19 11:07:58,552  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:07:58,584  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:07:58,604  [INFO]  Image embeddings computed.
+2025-06-19 11:07:59,810  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:07:59,820  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:07:59,836  [INFO]  Image embeddings computed.
+2025-06-19 11:08:01,678  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:08:01,693  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:08:01,709  [INFO]  Image embeddings computed.
+2025-06-19 11:08:03,283  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:08:03,297  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:08:03,313  [INFO]  Image embeddings computed.
+2025-06-19 11:08:04,632  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:08:04,648  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:08:04,663  [INFO]  Image embeddings computed.
+2025-06-19 11:08:05,855  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:08:05,868  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:08:05,883  [INFO]  Image embeddings computed.
+2025-06-19 11:08:07,047  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:08:07,062  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:08:07,093  [INFO]  Image embeddings computed.
+2025-06-19 11:08:10,231  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:08:10,236  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:08:24,051  [INFO]  Starte Pipeline
+2025-06-19 11:08:24,052  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-19 11:08:29,723  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:08:29,948  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:08:33,028  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:08:33,094  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:08:34,234  [INFO]  Image embeddings computed.
+2025-06-19 11:08:35,653  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:08:35,678  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:08:35,694  [INFO]  Image embeddings computed.
+2025-06-19 11:08:36,345  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:08:36,352  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:08:36,369  [INFO]  Image embeddings computed.
+2025-06-19 11:08:36,792  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:08:36,802  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:08:36,818  [INFO]  Image embeddings computed.
+2025-06-19 11:08:37,349  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:08:37,360  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:08:37,376  [INFO]  Image embeddings computed.
+2025-06-19 11:08:38,008  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:08:38,021  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:08:38,036  [INFO]  Image embeddings computed.
+2025-06-19 11:08:40,785  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:08:40,790  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:08:44,678  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 11:08:44,679  [ERROR]  Fehler bei Florence-2
+Traceback (most recent call last):
+  File "/home/dia/uni/BigData/sam2/pipeline/main_pipe.py", line 76, in run
+    caption = florence.classify(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/dia/uni/BigData/sam2/pipeline/florence2_module.py", line 49, in classify
+    raise ValueError("Unbekannter task_prompt")
+ValueError: Unbekannter task_prompt
+2025-06-19 11:09:01,355  [INFO]  Starte Pipeline
+2025-06-19 11:09:01,355  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-19 11:09:07,830  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:09:08,057  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:09:10,910  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:09:10,976  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:09:12,158  [INFO]  Image embeddings computed.
+2025-06-19 11:09:13,941  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:09:13,965  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:09:13,980  [INFO]  Image embeddings computed.
+2025-06-19 11:09:15,128  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:09:15,140  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:09:15,156  [INFO]  Image embeddings computed.
+2025-06-19 11:09:16,763  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:09:16,776  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:09:16,796  [INFO]  Image embeddings computed.
+2025-06-19 11:09:18,418  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:09:18,433  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:09:18,450  [INFO]  Image embeddings computed.
+2025-06-19 11:09:20,604  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:09:20,608  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:09:27,095  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 11:09:27,095  [ERROR]  Fehler bei Florence-2
+Traceback (most recent call last):
+  File "/home/dia/uni/BigData/sam2/pipeline/main_pipe.py", line 76, in run
+    caption = florence.classify(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/dia/uni/BigData/sam2/pipeline/florence2_module.py", line 49, in classify
+    raise ValueError("Unbekannter task_prompt")
+ValueError: Unbekannter task_prompt
+2025-06-19 11:10:50,089  [INFO]  Starte Pipeline
+2025-06-19 11:10:50,089  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-19 11:10:54,392  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:10:54,664  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:10:57,760  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:10:57,828  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:10:58,975  [INFO]  Image embeddings computed.
+2025-06-19 11:11:00,901  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:11:00,924  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:11:00,940  [INFO]  Image embeddings computed.
+2025-06-19 11:11:01,886  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:11:01,897  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:11:01,913  [INFO]  Image embeddings computed.
+2025-06-19 11:11:02,844  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:11:02,858  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:11:02,875  [INFO]  Image embeddings computed.
+2025-06-19 11:11:05,254  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:11:05,259  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:11:09,246  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 11:11:10,924  [INFO]  Caption: a small insect that is sitting on the ground
+2025-06-19 11:11:44,160  [INFO]  Starte Pipeline
+2025-06-19 11:11:44,160  [INFO]  Eingabebild: testbilder/PipeBild4.jpg
+2025-06-19 11:11:48,619  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:11:48,836  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:11:57,183  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:11:57,258  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:11:58,491  [INFO]  Image embeddings computed.
+2025-06-19 11:12:01,075  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:12:01,112  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:12:01,127  [INFO]  Image embeddings computed.
+2025-06-19 11:12:02,665  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:12:02,688  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:12:02,704  [INFO]  Image embeddings computed.
+2025-06-19 11:12:03,798  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:12:03,820  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:12:03,843  [INFO]  Image embeddings computed.
+2025-06-19 11:12:05,177  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:12:05,201  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:12:05,218  [INFO]  Image embeddings computed.
+2025-06-19 11:12:06,655  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:12:06,676  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:12:06,693  [INFO]  Image embeddings computed.
+2025-06-19 11:12:07,765  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:12:07,788  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:12:07,804  [INFO]  Image embeddings computed.
+2025-06-19 11:12:09,145  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:12:09,171  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:12:09,188  [INFO]  Image embeddings computed.
+2025-06-19 11:12:09,928  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:12:09,954  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:12:09,981  [INFO]  Image embeddings computed.
+2025-06-19 11:12:10,811  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:12:10,831  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:12:10,848  [INFO]  Image embeddings computed.
+2025-06-19 11:12:15,772  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:12:15,793  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:12:20,684  [INFO]  Florence-2 Modell geladen – generiere Caption
+2025-06-19 11:12:20,684  [ERROR]  Fehler bei Florence-2
+Traceback (most recent call last):
+  File "/home/dia/uni/BigData/sam2/pipeline/main_pipe.py", line 76, in run
+    caption = florence.classify(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/dia/uni/BigData/sam2/pipeline/florence2_module.py", line 46, in classify
+    raise ValueError("Für <VQA> muss text_input gesetzt sein.")
+ValueError: Für <VQA> muss text_input gesetzt sein.
+2025-06-19 11:34:14,740  [INFO]  Starte Pipeline
+2025-06-19 11:34:14,741  [INFO]  Eingabebild: testbilder/Schlagloch1.JPG
+2025-06-19 11:34:20,973  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:34:21,185  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:34:39,694  [INFO]  Starte Pipeline
+2025-06-19 11:34:39,694  [INFO]  Eingabebild: testbilder/Schlagloch1.jpg
+2025-06-19 11:34:44,664  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:34:44,874  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:35:10,785  [INFO]  Starte Pipeline
+2025-06-19 11:35:10,785  [INFO]  Eingabebild: testbilder/Schlagloch1.jpeg
+2025-06-19 11:35:15,483  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:35:15,679  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:35:20,619  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:35:20,719  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:35:23,075  [INFO]  Image embeddings computed.
+2025-06-19 11:35:25,794  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:35:25,837  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:35:25,853  [INFO]  Image embeddings computed.
+2025-06-19 11:35:27,864  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:35:27,894  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:35:27,909  [INFO]  Image embeddings computed.
+2025-06-19 11:35:29,461  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:35:29,496  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:35:29,512  [INFO]  Image embeddings computed.
+2025-06-19 11:35:31,749  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:35:31,789  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:35:31,821  [INFO]  Image embeddings computed.
+2025-06-19 11:35:33,324  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:35:33,355  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:35:33,371  [INFO]  Image embeddings computed.
+2025-06-19 11:35:38,026  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:35:38,066  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:35:38,086  [INFO]  Image embeddings computed.
+2025-06-19 11:35:39,849  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:35:39,882  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:35:39,897  [INFO]  Image embeddings computed.
+2025-06-19 11:35:41,387  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:35:41,421  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:35:41,446  [INFO]  Image embeddings computed.
+2025-06-19 11:35:43,149  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:35:43,177  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:35:43,193  [INFO]  Image embeddings computed.
+2025-06-19 11:35:45,331  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:35:45,363  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:35:45,384  [INFO]  Image embeddings computed.
+2025-06-19 11:35:52,107  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:35:52,133  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:35:59,918  [INFO]  Florence-2 Modell geladen – prüfe Pothole + Caption
+2025-06-19 11:36:06,733  [INFO]  POTHOLE DETECTED  →  1 Treffer
+2025-06-19 11:36:10,189  [INFO]  Caption: </s><s>The image shows a car parked on the side of a street next to a brick wall, with a person walking on the footpath, trees, and grass in the background. The street appears to be in the process of being repaired, as evidenced by the tools and materials scattered around the area.</s>
+2025-06-19 11:36:54,358  [INFO]  Starte Pipeline
+2025-06-19 11:36:54,358  [INFO]  Eingabebild: testbilder/Schlagloch2.jpeg
+2025-06-19 11:36:59,252  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:36:59,471  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:37:07,394  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:07,475  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:08,728  [INFO]  Image embeddings computed.
+2025-06-19 11:37:10,238  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:10,261  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:10,279  [INFO]  Image embeddings computed.
+2025-06-19 11:37:11,489  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:11,500  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:11,515  [INFO]  Image embeddings computed.
+2025-06-19 11:37:12,420  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:12,436  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:12,451  [INFO]  Image embeddings computed.
+2025-06-19 11:37:13,361  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:13,381  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:13,397  [INFO]  Image embeddings computed.
+2025-06-19 11:37:14,311  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:14,326  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:14,341  [INFO]  Image embeddings computed.
+2025-06-19 11:37:15,180  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:15,195  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:15,212  [INFO]  Image embeddings computed.
+2025-06-19 11:37:16,135  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:16,150  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:16,171  [INFO]  Image embeddings computed.
+2025-06-19 11:37:16,837  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:16,851  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:16,881  [INFO]  Image embeddings computed.
+2025-06-19 11:37:17,439  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:17,453  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:17,469  [INFO]  Image embeddings computed.
+2025-06-19 11:37:17,910  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:17,924  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:17,941  [INFO]  Image embeddings computed.
+2025-06-19 11:37:18,379  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:18,396  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:18,411  [INFO]  Image embeddings computed.
+2025-06-19 11:37:19,621  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:19,636  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:19,655  [INFO]  Image embeddings computed.
+2025-06-19 11:37:20,105  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:20,118  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:20,133  [INFO]  Image embeddings computed.
+2025-06-19 11:37:21,204  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:21,218  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:21,245  [INFO]  Image embeddings computed.
+2025-06-19 11:37:21,681  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:21,693  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:21,708  [INFO]  Image embeddings computed.
+2025-06-19 11:37:22,156  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:22,169  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:22,188  [INFO]  Image embeddings computed.
+2025-06-19 11:37:22,628  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:22,643  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:22,659  [INFO]  Image embeddings computed.
+2025-06-19 11:37:23,101  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:23,113  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:23,129  [INFO]  Image embeddings computed.
+2025-06-19 11:37:23,581  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:23,594  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:23,610  [INFO]  Image embeddings computed.
+2025-06-19 11:37:24,054  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:24,067  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:24,083  [INFO]  Image embeddings computed.
+2025-06-19 11:37:24,522  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:24,535  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:24,554  [INFO]  Image embeddings computed.
+2025-06-19 11:37:24,999  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:25,013  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:25,028  [INFO]  Image embeddings computed.
+2025-06-19 11:37:25,479  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:25,492  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:25,510  [INFO]  Image embeddings computed.
+2025-06-19 11:37:25,955  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:25,968  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:25,997  [INFO]  Image embeddings computed.
+2025-06-19 11:37:27,960  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:27,975  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:27,993  [INFO]  Image embeddings computed.
+2025-06-19 11:37:28,436  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:28,448  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:28,463  [INFO]  Image embeddings computed.
+2025-06-19 11:37:28,909  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:28,923  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:28,945  [INFO]  Image embeddings computed.
+2025-06-19 11:37:29,387  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:29,401  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:29,416  [INFO]  Image embeddings computed.
+2025-06-19 11:37:29,868  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:29,882  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:29,897  [INFO]  Image embeddings computed.
+2025-06-19 11:37:30,356  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:30,370  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:30,386  [INFO]  Image embeddings computed.
+2025-06-19 11:37:30,835  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:30,847  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:30,868  [INFO]  Image embeddings computed.
+2025-06-19 11:37:31,321  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:31,335  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:31,350  [INFO]  Image embeddings computed.
+2025-06-19 11:37:31,823  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:31,834  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:31,857  [INFO]  Image embeddings computed.
+2025-06-19 11:37:32,294  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:32,307  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:32,326  [INFO]  Image embeddings computed.
+2025-06-19 11:37:32,772  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:32,785  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:32,802  [INFO]  Image embeddings computed.
+2025-06-19 11:37:33,250  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:33,263  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:33,278  [INFO]  Image embeddings computed.
+2025-06-19 11:37:33,727  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:33,740  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:33,755  [INFO]  Image embeddings computed.
+2025-06-19 11:37:34,221  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:34,233  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:34,248  [INFO]  Image embeddings computed.
+2025-06-19 11:37:34,699  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:34,713  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:34,728  [INFO]  Image embeddings computed.
+2025-06-19 11:37:35,180  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:35,192  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:35,207  [INFO]  Image embeddings computed.
+2025-06-19 11:37:35,655  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:35,667  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:35,682  [INFO]  Image embeddings computed.
+2025-06-19 11:37:36,134  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:36,146  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:36,165  [INFO]  Image embeddings computed.
+2025-06-19 11:37:36,614  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:36,625  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:36,641  [INFO]  Image embeddings computed.
+2025-06-19 11:37:37,095  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:37,108  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:37,125  [INFO]  Image embeddings computed.
+2025-06-19 11:37:37,576  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:37,588  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:37,603  [INFO]  Image embeddings computed.
+2025-06-19 11:37:38,058  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:37:38,071  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:37:38,086  [INFO]  Image embeddings computed.
+2025-06-19 11:37:42,011  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:37:42,022  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:37:47,407  [INFO]  Florence-2 Modell geladen – prüfe Pothole + Caption
+2025-06-19 11:37:51,126  [INFO]  POTHOLE DETECTED  →  1 Treffer
+2025-06-19 11:37:53,664  [INFO]  Caption: </s><s>The image shows a street with cars parked on the side of it, surrounded by buildings, trees, light poles, sign boards, and grass. The sky in the background is filled with clouds.</s>
+2025-06-19 11:38:37,345  [INFO]  Starte Pipeline
+2025-06-19 11:38:37,345  [INFO]  Eingabebild: testbilder/CLXQ7779.JPG
+2025-06-19 11:38:41,581  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:38:41,780  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:38:44,927  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:38:44,992  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:38:46,070  [INFO]  Image embeddings computed.
+2025-06-19 11:38:48,624  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:38:48,628  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:38:53,888  [INFO]  Florence-2 Modell geladen – prüfe Pothole + Caption
+2025-06-19 11:38:57,349  [INFO]  POTHOLE DETECTED  →  1 Treffer
+2025-06-19 11:39:00,127  [INFO]  Caption: </s><s>The image shows two killer whales swimming in the ocean, their black and white bodies glistening in the sunlight.</s>
+2025-06-19 11:40:35,790  [INFO]  Starte Pipeline
+2025-06-19 11:40:35,790  [INFO]  Eingabebild: testbilder/CLXQ7779.JPG
+2025-06-19 11:40:39,922  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:40:40,121  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:40:41,252  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:40:41,316  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:40:42,347  [INFO]  Image embeddings computed.
+2025-06-19 11:40:43,819  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:40:43,823  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:40:49,104  [INFO]  Florence-2 Modell geladen – prüfe Pothole + Caption
+2025-06-19 11:40:52,479  [INFO]  POTHOLE DETECTED  →  1 Treffer
+2025-06-19 11:40:55,300  [INFO]  Caption: </s><s>The image shows two killer whales swimming in the ocean, their black and white bodies glistening in the sunlight.</s>
+2025-06-19 11:45:07,694  [INFO]  Starte Pipeline
+2025-06-19 11:45:07,694  [INFO]  Eingabebild: testbilder/CLXQ7779.JPG
+2025-06-19 11:45:12,157  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:45:12,360  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:45:14,208  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:45:14,273  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:45:15,399  [INFO]  Image embeddings computed.
+2025-06-19 11:45:16,433  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:45:16,437  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:45:21,390  [INFO]  Florence-2 Modell geladen – prüfe Pothole + Caption
+2025-06-19 11:45:24,559  [INFO]  Kein Schlagloch gefunden
+2025-06-19 11:45:27,016  [INFO]  Caption: </s><s>The image shows two killer whales swimming in the ocean, their black and white bodies glistening in the sunlight.</s>
+2025-06-19 11:45:47,333  [INFO]  Starte Pipeline
+2025-06-19 11:45:47,333  [INFO]  Eingabebild: testbilder/Schlagloch4.jpeg
+2025-06-19 11:45:51,807  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:45:52,027  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:46:01,902  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:46:01,982  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:46:03,972  [INFO]  Image embeddings computed.
+2025-06-19 11:46:06,111  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:46:06,142  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:46:06,164  [INFO]  Image embeddings computed.
+2025-06-19 11:46:07,413  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:46:07,444  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:46:07,459  [INFO]  Image embeddings computed.
+2025-06-19 11:46:08,547  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:46:08,571  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:46:08,588  [INFO]  Image embeddings computed.
+2025-06-19 11:46:10,687  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:46:10,707  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:46:10,729  [INFO]  Image embeddings computed.
+2025-06-19 11:46:11,444  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:46:11,470  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:46:11,485  [INFO]  Image embeddings computed.
+2025-06-19 11:46:12,166  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:46:12,189  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:46:12,206  [INFO]  Image embeddings computed.
+2025-06-19 11:46:13,155  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:46:13,189  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:46:13,206  [INFO]  Image embeddings computed.
+2025-06-19 11:46:15,095  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:46:15,115  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:46:15,130  [INFO]  Image embeddings computed.
+2025-06-19 11:46:16,559  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:46:16,584  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:46:16,605  [INFO]  Image embeddings computed.
+2025-06-19 11:46:17,841  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:46:17,868  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:46:17,884  [INFO]  Image embeddings computed.
+2025-06-19 11:46:19,236  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:46:19,261  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:46:19,277  [INFO]  Image embeddings computed.
+2025-06-19 11:46:20,827  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:46:20,853  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:46:20,869  [INFO]  Image embeddings computed.
+2025-06-19 11:46:23,550  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:46:23,581  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:46:23,600  [INFO]  Image embeddings computed.
+2025-06-19 11:46:29,414  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:46:29,436  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:46:34,802  [INFO]  Florence-2 Modell geladen – prüfe Pothole + Caption
+2025-06-19 11:46:38,415  [INFO]  Kein Schlagloch gefunden
+2025-06-19 11:46:41,057  [INFO]  Caption: </s><s>The image shows a street with a cobblestone sidewalk and a car parked on the side of it. On the right side of the street, there are plants and a pillar, and in the background there are trees and grass. The street is covered in asphalt, and there are a few dry leaves scattered on the ground.</s>
+2025-06-19 11:48:27,572  [INFO]  Starte Pipeline
+2025-06-19 11:48:27,572  [INFO]  Eingabebild: testbilder/Schlagloch4.jpeg
+2025-06-19 11:48:31,559  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:48:31,758  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:49:01,264  [INFO]  Starte Pipeline
+2025-06-19 11:49:01,264  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-19 11:49:05,409  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:49:05,628  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:49:08,906  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:08,968  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:10,051  [INFO]  Image embeddings computed.
+2025-06-19 11:49:12,455  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:12,479  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:12,494  [INFO]  Image embeddings computed.
+2025-06-19 11:49:14,631  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:14,643  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:14,660  [INFO]  Image embeddings computed.
+2025-06-19 11:49:16,250  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:16,264  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:16,283  [INFO]  Image embeddings computed.
+2025-06-19 11:49:17,892  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:17,908  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:17,923  [INFO]  Image embeddings computed.
+2025-06-19 11:49:19,392  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:19,406  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:19,421  [INFO]  Image embeddings computed.
+2025-06-19 11:49:20,902  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:20,912  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:20,928  [INFO]  Image embeddings computed.
+2025-06-19 11:49:22,235  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:22,250  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:22,282  [INFO]  Image embeddings computed.
+2025-06-19 11:49:23,923  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:23,934  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:23,951  [INFO]  Image embeddings computed.
+2025-06-19 11:49:24,703  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:24,715  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:24,732  [INFO]  Image embeddings computed.
+2025-06-19 11:49:25,265  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:25,278  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:25,294  [INFO]  Image embeddings computed.
+2025-06-19 11:49:26,158  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:26,171  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:26,188  [INFO]  Image embeddings computed.
+2025-06-19 11:49:27,845  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:27,856  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:27,873  [INFO]  Image embeddings computed.
+2025-06-19 11:49:28,297  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:28,310  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:28,326  [INFO]  Image embeddings computed.
+2025-06-19 11:49:29,603  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:29,613  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:29,629  [INFO]  Image embeddings computed.
+2025-06-19 11:49:30,612  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:30,622  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:30,644  [INFO]  Image embeddings computed.
+2025-06-19 11:49:31,234  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:31,247  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:31,280  [INFO]  Image embeddings computed.
+2025-06-19 11:49:32,052  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:32,066  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:32,082  [INFO]  Image embeddings computed.
+2025-06-19 11:49:32,582  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:32,590  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:32,607  [INFO]  Image embeddings computed.
+2025-06-19 11:49:33,127  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:33,137  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:33,157  [INFO]  Image embeddings computed.
+2025-06-19 11:49:33,646  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:33,658  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:33,675  [INFO]  Image embeddings computed.
+2025-06-19 11:49:34,108  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:34,120  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:34,139  [INFO]  Image embeddings computed.
+2025-06-19 11:49:34,569  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:34,582  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:34,599  [INFO]  Image embeddings computed.
+2025-06-19 11:49:35,027  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:35,037  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:35,053  [INFO]  Image embeddings computed.
+2025-06-19 11:49:35,481  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:35,490  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:35,507  [INFO]  Image embeddings computed.
+2025-06-19 11:49:35,940  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:35,950  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:35,965  [INFO]  Image embeddings computed.
+2025-06-19 11:49:36,396  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:36,406  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:36,423  [INFO]  Image embeddings computed.
+2025-06-19 11:49:36,860  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:36,871  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:36,888  [INFO]  Image embeddings computed.
+2025-06-19 11:49:37,321  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:37,334  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:37,351  [INFO]  Image embeddings computed.
+2025-06-19 11:49:37,784  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:37,796  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:37,811  [INFO]  Image embeddings computed.
+2025-06-19 11:49:38,250  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:38,259  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:38,276  [INFO]  Image embeddings computed.
+2025-06-19 11:49:38,705  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:38,718  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:38,733  [INFO]  Image embeddings computed.
+2025-06-19 11:49:39,162  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:39,174  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:39,189  [INFO]  Image embeddings computed.
+2025-06-19 11:49:39,620  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:39,633  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:39,648  [INFO]  Image embeddings computed.
+2025-06-19 11:49:40,078  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:40,091  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:40,106  [INFO]  Image embeddings computed.
+2025-06-19 11:49:40,538  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:40,549  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:40,565  [INFO]  Image embeddings computed.
+2025-06-19 11:49:41,000  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:41,014  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:41,030  [INFO]  Image embeddings computed.
+2025-06-19 11:49:41,460  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:41,473  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:41,487  [INFO]  Image embeddings computed.
+2025-06-19 11:49:41,917  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:41,927  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:41,947  [INFO]  Image embeddings computed.
+2025-06-19 11:49:42,374  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:42,388  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:42,404  [INFO]  Image embeddings computed.
+2025-06-19 11:49:42,838  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:42,849  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:42,864  [INFO]  Image embeddings computed.
+2025-06-19 11:49:44,812  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:44,824  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:44,842  [INFO]  Image embeddings computed.
+2025-06-19 11:49:45,278  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:45,290  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:45,307  [INFO]  Image embeddings computed.
+2025-06-19 11:49:45,747  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:45,764  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:45,780  [INFO]  Image embeddings computed.
+2025-06-19 11:49:46,217  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:46,230  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:46,247  [INFO]  Image embeddings computed.
+2025-06-19 11:49:46,687  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:46,700  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:46,715  [INFO]  Image embeddings computed.
+2025-06-19 11:49:47,153  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:47,164  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:47,180  [INFO]  Image embeddings computed.
+2025-06-19 11:49:47,640  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:47,652  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:47,685  [INFO]  Image embeddings computed.
+2025-06-19 11:49:48,106  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:48,121  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:48,141  [INFO]  Image embeddings computed.
+2025-06-19 11:49:48,577  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:48,587  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:48,604  [INFO]  Image embeddings computed.
+2025-06-19 11:49:49,042  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:49,052  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:49,071  [INFO]  Image embeddings computed.
+2025-06-19 11:49:49,504  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:49,516  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:49,532  [INFO]  Image embeddings computed.
+2025-06-19 11:49:49,965  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:49,976  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:49,992  [INFO]  Image embeddings computed.
+2025-06-19 11:49:50,425  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:50,435  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:50,451  [INFO]  Image embeddings computed.
+2025-06-19 11:49:50,891  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:50,903  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:50,919  [INFO]  Image embeddings computed.
+2025-06-19 11:49:51,356  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:51,369  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:51,385  [INFO]  Image embeddings computed.
+2025-06-19 11:49:51,817  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:51,829  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:51,845  [INFO]  Image embeddings computed.
+2025-06-19 11:49:52,276  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:52,288  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:52,303  [INFO]  Image embeddings computed.
+2025-06-19 11:49:52,735  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:52,748  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:52,765  [INFO]  Image embeddings computed.
+2025-06-19 11:49:53,200  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:53,213  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:53,228  [INFO]  Image embeddings computed.
+2025-06-19 11:49:53,665  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:53,677  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:53,693  [INFO]  Image embeddings computed.
+2025-06-19 11:49:54,129  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:54,140  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:54,156  [INFO]  Image embeddings computed.
+2025-06-19 11:49:54,592  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:54,603  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:54,618  [INFO]  Image embeddings computed.
+2025-06-19 11:49:55,065  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:55,078  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:55,093  [INFO]  Image embeddings computed.
+2025-06-19 11:49:55,529  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:55,541  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:55,558  [INFO]  Image embeddings computed.
+2025-06-19 11:49:55,988  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:55,999  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:56,015  [INFO]  Image embeddings computed.
+2025-06-19 11:49:56,447  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:56,459  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:56,474  [INFO]  Image embeddings computed.
+2025-06-19 11:49:56,912  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:56,923  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:56,939  [INFO]  Image embeddings computed.
+2025-06-19 11:49:58,519  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:58,535  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:58,551  [INFO]  Image embeddings computed.
+2025-06-19 11:49:59,602  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:49:59,614  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:49:59,631  [INFO]  Image embeddings computed.
+2025-06-19 11:50:00,477  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:00,492  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:00,510  [INFO]  Image embeddings computed.
+2025-06-19 11:50:01,287  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:01,300  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:01,316  [INFO]  Image embeddings computed.
+2025-06-19 11:50:01,949  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:01,960  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:01,979  [INFO]  Image embeddings computed.
+2025-06-19 11:50:02,892  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:02,903  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:02,918  [INFO]  Image embeddings computed.
+2025-06-19 11:50:03,523  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:03,537  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:03,553  [INFO]  Image embeddings computed.
+2025-06-19 11:50:04,064  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:04,076  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:04,094  [INFO]  Image embeddings computed.
+2025-06-19 11:50:04,533  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:04,546  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:04,562  [INFO]  Image embeddings computed.
+2025-06-19 11:50:06,028  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:06,045  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:06,062  [INFO]  Image embeddings computed.
+2025-06-19 11:50:07,003  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:07,017  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:07,033  [INFO]  Image embeddings computed.
+2025-06-19 11:50:07,468  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:07,479  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:07,505  [INFO]  Image embeddings computed.
+2025-06-19 11:50:07,932  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:07,944  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:07,961  [INFO]  Image embeddings computed.
+2025-06-19 11:50:08,399  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:08,409  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:08,426  [INFO]  Image embeddings computed.
+2025-06-19 11:50:08,866  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:08,876  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:08,894  [INFO]  Image embeddings computed.
+2025-06-19 11:50:09,338  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:09,349  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:09,366  [INFO]  Image embeddings computed.
+2025-06-19 11:50:09,801  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:09,813  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:09,828  [INFO]  Image embeddings computed.
+2025-06-19 11:50:10,262  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:10,273  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:10,288  [INFO]  Image embeddings computed.
+2025-06-19 11:50:10,734  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:10,751  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:10,770  [INFO]  Image embeddings computed.
+2025-06-19 11:50:11,207  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:11,220  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:11,237  [INFO]  Image embeddings computed.
+2025-06-19 11:50:15,567  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:15,584  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:15,607  [INFO]  Image embeddings computed.
+2025-06-19 11:50:16,270  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:16,282  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:16,300  [INFO]  Image embeddings computed.
+2025-06-19 11:50:16,738  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:50:16,750  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:50:16,768  [INFO]  Image embeddings computed.
+2025-06-19 11:50:29,639  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:50:29,642  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:50:34,781  [INFO]  Florence-2 Modell geladen – prüfe Pothole + Caption
+2025-06-19 11:50:38,381  [INFO]  Kein Schlagloch gefunden
+2025-06-19 11:50:40,603  [INFO]  Caption: </s><s>The image shows a car driving on a road with a large pothole in the middle of it. The car is surrounded by grass and there is a watermark at the bottom of the image.</s>
+2025-06-19 11:53:31,428  [INFO]  Starte Pipeline
+2025-06-19 11:53:31,428  [INFO]  Eingabebild: testbilder/testschlagloch.jpg
+2025-06-19 11:53:35,444  [INFO]  Loaded checkpoint sucessfully
+2025-06-19 11:53:35,637  [INFO]  SAM-2 Modell geladen
+2025-06-19 11:53:39,051  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:53:39,115  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:53:40,259  [INFO]  Image embeddings computed.
+2025-06-19 11:53:41,894  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:53:41,920  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:53:41,936  [INFO]  Image embeddings computed.
+2025-06-19 11:53:43,187  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:53:43,202  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:53:43,217  [INFO]  Image embeddings computed.
+2025-06-19 11:53:44,145  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:53:44,156  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:53:44,174  [INFO]  Image embeddings computed.
+2025-06-19 11:53:45,209  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:53:45,222  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:53:45,238  [INFO]  Image embeddings computed.
+2025-06-19 11:53:46,289  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:53:46,306  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:53:46,324  [INFO]  Image embeddings computed.
+2025-06-19 11:53:46,750  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:53:46,763  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:53:46,779  [INFO]  Image embeddings computed.
+2025-06-19 11:53:47,653  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:53:47,666  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:53:47,683  [INFO]  Image embeddings computed.
+2025-06-19 11:53:48,771  [INFO]  For numpy array image, we assume (HxWxC) format
+2025-06-19 11:53:48,784  [INFO]  Computing image embeddings for the provided image...
+2025-06-19 11:53:48,800  [INFO]  Image embeddings computed.
+2025-06-19 11:53:50,232  [INFO]  Interaktive Segmentierung abgeschlossen
+2025-06-19 11:53:50,236  [INFO]  Binärmaske gespeichert → erste_anwendung/mask.png
+2025-06-19 11:53:55,324  [INFO]  Florence-2 Modell geladen – prüfe Pothole + Caption
+2025-06-19 11:53:58,680  [INFO]  Kein Schlagloch gefunden
+2025-06-19 11:54:01,627  [INFO]  Caption: </s><s>The image shows a small bird sitting on the ground next to a car, with a watermark on the image. The bird appears to be a sparrow, with its wings spread out and its head slightly tilted. Its feathers are a mix of brown and white, and its eyes are a bright yellow. Its beak is slightly open, as if it is about to take flight.</s>
