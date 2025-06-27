@@ -4,6 +4,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 import tempfile, shutil
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from sam2.sam2_video_predictor import SAM2VideoPredictor
 
 # Zielordner für Masken
@@ -23,15 +26,15 @@ train_image_names = [
     "Schlagloch9.jpeg",
     "Schlagloch10.jpeg",
     "Schlagloch11.jpg",
-    "Schlagloch12.jpeg",
-    "Schlagloch13.jpeg",
-    "Schlagloch14.jpeg",
-    "Schlagloch15.jpeg",
-    "Schlagloch16.jpeg",
-    "Schlagloch17.jpeg",
-    "Schlagloch18.jpeg",
-    "Schlagloch19.jpeg",
-    "Schlagloch20.jpeg",
+    "Schlagloch12.jpg",
+    "Schlagloch13.jpg",
+    "Schlagloch14.jpg",
+    "Schlagloch15.jpg",
+    "Schlagloch16.jpg",
+    "Schlagloch17.jpg",
+    "Schlagloch18.jpg",
+    "Schlagloch19.jpg",
+    "Schlagloch20.jpg",
     "Schlagloch21.jpg",
     "Schlagloch22.jpg",
     "Schlagloch23.jpg",
