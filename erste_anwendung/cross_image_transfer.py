@@ -102,9 +102,10 @@ def _new_run_dict(ts, n_train, model_size, seq_folder):
         "expected_total": 0,
         "found_total":    0,
 
-        # neue globale Fehlerzähler
-        "false_negatives": 0,   # expected=True  & found=False
-        "false_positives": 0,   # expected=False & found=True
+        "true_positives":  0,
+        "true_negatives":  0,
+        "false_negatives": 0,
+        "false_positives": 0,
 
         "per_image": []        # hier hängen wir später dicts an
     }
@@ -175,31 +176,38 @@ def run_cross_image_transfer(n_train, model_size, seq_folder):
             "img_name": img_name,
             "expected": expected,
             "found":    found,
-            "type": ("tp" if  expected and  found else      # True  Positive
-                    "tn" if not expected and not found else # True  Negative
-                    "fn" if  expected and not found else    # False Negative
-                    "fp")                                   # False Positive
+            "type": ("tp" if  expected and  found else
+                    "tn" if not expected and not found else
+                    "fn" if  expected and not found else
+                    "fp")
         })
+
 
         # Gesamt-Zähler updaten
         if expected:  run_log["expected_total"] += 1
         if found:     run_log["found_total"]    += 1
-        if expected and not found:
+
+        if expected and found:
+            run_log["true_positives"] += 1
+        elif not expected and not found:
+            run_log["true_negatives"] += 1
+        elif expected and not found:
             run_log["false_negatives"] += 1
-        elif (not expected) and found:
+        elif not expected and found:
             run_log["false_positives"] += 1
 
-        run_log["expected_total"] = sum(1 for item in run_log["per_image"] if item["expected"])
+        run_log["expected_total"] = run_log["true_positives"] + run_log["false_negatives"]
+        run_log["found_total"]    = run_log["true_positives"] + run_log["false_positives"]
+        run_log["runtime_seconds"] = round(time.time() - start_time, 3)
 
-        run_log["found_total"]    += int(found)
-        run_log["runtime_seconds"] = round(time.time() - start_time, 3)   # ❸ stoppen
-
-        timestamp_str = ts.replace(":", "-").replace("T", "_")
-        log_filename = f"Model{model_size}_nTrain{n_train}_{timestamp_str}.json"
-        json_path = os.path.join(LOG_DIR, log_filename)
+    timestamp_str = ts.replace(":", "-").replace("T", "_")
+    log_filename = f"Model{model_size}_nTrain{n_train}_{timestamp_str}.json"
+    json_path = os.path.join(LOG_DIR, log_filename)
 
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(run_log, f, indent=2)
+    print(f"💾 Log gespeichert unter: {json_path}")
+
     print(f"💾 Log gespeichert unter: {json_path}")
 
     # Bildbrowser für alle Sequenzbilder (Trainingsbilder werden nicht angezeigt)
