@@ -92,12 +92,13 @@ EXPECTED_POTHOLES = {
     '761794412794226.jpg': True
 }
 ####################################################################################################
-def _new_run_dict(ts, n_train, model_size, seq_folder):
+def _new_run_dict(ts, n_train, model_size, seq_folder, masks_folder):
     return {
         "timestamp": ts,
         "model_size": model_size,
         "n_train": n_train,
         "seq_folder": os.path.basename(seq_folder),
+        "masks_folder": os.path.basename(masks_folder) if masks_folder else None,
 
         "expected_total": 0,
         "found_total":    0,
@@ -111,13 +112,14 @@ def _new_run_dict(ts, n_train, model_size, seq_folder):
     }
 
 
-def run_cross_image_transfer(n_train, model_size, seq_folder):
+def run_cross_image_transfer(n_train, model_size, seq_folder, masks_folder = None):
     # >>> Monitoring initialisieren
     ts = datetime.datetime.now().isoformat(timespec="seconds")
     start_time      = time.time()  
-    run_log = _new_run_dict(ts, n_train, model_size, seq_folder)
+    if masks_folder:                         # NEW -------------------------------------------------
+        os.makedirs(masks_folder, exist_ok=True)
+    run_log = _new_run_dict(ts, n_train, model_size, seq_folder, masks_folder)
     # -------------------------------
-
     # ---------------- dein Originalcode (unverändert) ----------------
     train_image_names = [
         "Schlagloch1.jpeg","Schlagloch2.jpeg","Schlagloch3.jpeg",
@@ -172,6 +174,12 @@ def run_cross_image_transfer(n_train, model_size, seq_folder):
         expected = is_expected_pothole(img_name)
         mask       = all_video_segments[seq_idx].get(1, True)
         found      = bool(mask is not True and mask.sum() > 0)
+        if expected and found and masks_folder:
+            out_name = os.path.splitext(img_name)[0] + ".npz"
+            out_path = os.path.join(masks_folder, out_name)
+            # wir speichern einfach das Binär-Mask-Array (0/1) – weitere Infos je nach Bedarf
+            np.savez(out_path, mask=mask.astype(np.uint8))
+            print(f"✅  Maske gespeichert: {out_path}")
         run_log["per_image"].append({
             "img_name": img_name,
             "expected": expected,
@@ -282,21 +290,30 @@ def run_cross_image_transfer(n_train, model_size, seq_folder):
 
 ## aufruf mit parameter übergeben bei skript aufruf
 # python3 erste_anwendung/cross_image_transfer.py \
-#   --model_size tiny \
-#   --n_train 6 \
-#   --seq_folder seq/meister_bertram_mit_eindeutigen_potholes
+#        --model_size tiny \
+#        --n_train 6 \
+#        --seq_folder seq/meister_bertram_mit_eindeutigen_potholes \
+#        --masks_folder gespeicherte_masks
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run SAM2 cross-image transfer.")
-    parser.add_argument("--model_size", type=str, required=True, choices=["tiny", "small", "base-plus", "large"],
-                        help="Model variant to use (tiny, small, base_plus, large).")
-    parser.add_argument("--n_train", type=int, required=True, help="Number of training images to use.")
-    parser.add_argument("--seq_folder", type=str, required=True, help="Path to the sequence folder.")
+    parser.add_argument("--model_size", type=str, required=True,
+                        choices=["tiny", "small", "base_plus", "large"],
+                        help="SAM2-Gewichtsvariante.")
+    parser.add_argument("--n_train", type=int, required=True,
+                        help="Anzahl Trainingsbilder.")
+    parser.add_argument("--seq_folder", type=str, required=True,
+                        help="Ordner mit den Sequenzbildern.")
+    # ---------- NEU ----------
+    parser.add_argument("--masks_folder", type=str, default=None,
+                        help="Optional: Zielordner, in den True-Positive-Masken (NPZ) geschrieben werden.")
+    # -------------------------
 
     args = parser.parse_args()
 
     run_cross_image_transfer(
-        n_train=args.n_train,
-        model_size=args.model_size,
-        seq_folder=args.seq_folder
+        n_train      = args.n_train,
+        model_size   = args.model_size,
+        seq_folder   = args.seq_folder,
+        masks_folder = args.masks_folder        # NEW
     )
