@@ -288,7 +288,7 @@ def run_cross_image_transfer(n_train, model_size, seq_folder):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run SAM2 cross-image transfer.")
-    parser.add_argument("--model_size", type=str, required=True, choices=["tiny", "small", "base_plus", "large"],
+    parser.add_argument("--model_size", type=str, required=True, choices=["tiny", "small", "base-plus", "large"],
                         help="Model variant to use (tiny, small, base_plus, large).")
     parser.add_argument("--n_train", type=int, required=True, help="Number of training images to use.")
     parser.add_argument("--seq_folder", type=str, required=True, help="Path to the sequence folder.")

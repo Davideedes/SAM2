@@ -16,8 +16,12 @@ train_image_names = [
     "Schlagloch2.jpeg",
     "Schlagloch3.jpeg",
     "Schlagloch4.jpeg",
+    "Schlagloch5.jpeg",
+    "Schlagloch6.jpeg",
     "Schlagloch7.jpeg",
     "Schlagloch8.jpeg",
+    "Schlagloch9.jpeg",
+    "Schlagloch10.jpeg",
     "Schlagloch11.jpg",
 ]
 train_image_paths = [os.path.join("testbilder", name) for name in train_image_names]
