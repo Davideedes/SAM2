@@ -7,7 +7,7 @@ import tempfile, shutil
 from sam2.sam2_video_predictor import SAM2VideoPredictor
 
 # Zielordner für Masken
-mask_dir = "train_masks"
+mask_dir = "training_pictures_masks"
 os.makedirs(mask_dir, exist_ok=True)
 
 # Trainingsbilder
@@ -23,6 +23,18 @@ train_image_names = [
     "Schlagloch9.jpeg",
     "Schlagloch10.jpeg",
     "Schlagloch11.jpg",
+    "Schlagloch12.jpeg",
+    "Schlagloch13.jpeg",
+    "Schlagloch14.jpeg",
+    "Schlagloch15.jpeg",
+    "Schlagloch16.jpeg",
+    "Schlagloch17.jpeg",
+    "Schlagloch18.jpeg",
+    "Schlagloch19.jpeg",
+    "Schlagloch20.jpeg",
+    "Schlagloch21.jpg",
+    "Schlagloch22.jpg",
+    "Schlagloch23.jpg",
 ]
 train_image_paths = [os.path.join("testbilder", name) for name in train_image_names]
 
