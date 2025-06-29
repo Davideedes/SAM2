@@ -8,7 +8,7 @@ from sam2.sam2_image_predictor import SAM2ImagePredictor
 
 # 2. Bild laden
 #image_path = os.path.join("testbilder", "testschlagloch.jpg")
-image_path = os.path.join("testbilder", "CLXQ7779.JPG")
+image_path = os.path.join("testbilder", "Schlagloch1.jpeg")
 image = Image.open(image_path).convert("RGB")
 image_np = np.array(image)
 
@@ -93,5 +93,5 @@ if final_mask is not None:
     from PIL import Image as PILImage
     mask_to_save = (final_mask > 0).astype(np.uint8) * 255
     pil_mask = PILImage.fromarray(mask_to_save)
-    pil_mask.save(r"erste_anwendung/masks/finale_maske.png")
-    print("Finale Maske gespeichert als finale_maske.png")
+    # pil_mask.save(r"erste_anwendung/masks/finale_maske.png")
+    # print("Finale Maske gespeichert als finale_maske.png")
