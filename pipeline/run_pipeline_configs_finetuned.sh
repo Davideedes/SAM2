@@ -3,33 +3,35 @@
 # bash pipeline/run_pipeline_configs.sh
 
 
-#!/usr/bin/env bash
 set -euo pipefail
 
 # ------------------------------------------------------------
-# Basisordner für Sequenz und Masken (ggf. anpassen)
+# Basisordner für Eingabesequenz und Ausgabe
 SEQ_FOLDER="pipeline/resources/sequence_to_test_1"
-MASKS_BASE="pipeline/resources/generated_npz_masks_from_run"
+MASKS_BASE="pipeline/resources/generated_npz_masks_custom"
+# ⚠️ → Hier YAML und Checkpoint anpassen
+CFG_PATH="configs/<HIER_DEINE_YAML_DATEI>.yaml"
+CKPT_PATH="checkpoints/<HIER_DEIN_CHECKPOINT>.pt"
 # ------------------------------------------------------------
 
-MODELS=( tiny small base large )
+for N in {1..7}; do
+  MASKS_FOLDER="${MASKS_BASE}/custom_n${N}"     # Zielordner für diesen Run
+  mkdir -p "${MASKS_FOLDER}"                    # Anlegen, falls nötig
 
-for MODEL in "${MODELS[@]}"; do
-  for N in {1..7}; do
-    MASKS_FOLDER="${MASKS_BASE}/${MODEL}_n${N}"   # eindeutiger Unterordner
-    mkdir -p "${MASKS_FOLDER}"                    # legt ihn an, falls nicht existent
+  echo "=========================================================="
+  echo "➡️  Starte: model_size=custom | n_train=${N}"
+  echo "----------------------------------------------------------"
 
-    echo "=========================================================="
-    echo "➡️  Starte: model_size=${MODEL} | n_train=${N}"
-    echo "----------------------------------------------------------"
-    python3 -m pipeline.cli \
-        --model-size   "${MODEL}" \
-        --n-train      "${N}" \
-        --seq-folder   "${SEQ_FOLDER}" \
-        --masks-folder "${MASKS_FOLDER}"
-    echo "✅  Fertig:  model_size=${MODEL} | n_train=${N}"
-    echo
-  done
+  python3 -m pipeline.cli \
+      --model-size   custom \
+      --n-train      "${N}" \
+      --seq-folder   "${SEQ_FOLDER}" \
+      --masks-folder "${MASKS_FOLDER}" \
+      --cfg-path     "${CFG_PATH}" \
+      --ckpt-path    "${CKPT_PATH}"
+
+  echo "✅  Fertig:  model_size=custom | n_train=${N}"
+  echo
 done
 
-echo "🎉 Alle Kombinationen abgeschlossen."
+echo "🎉 Alle Custom-Konfigurationen abgeschlossen."
