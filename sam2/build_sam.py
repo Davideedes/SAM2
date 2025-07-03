@@ -172,3 +172,88 @@ def _load_checkpoint(model, ckpt_path):
             logging.error(unexpected_keys)
             raise RuntimeError()
         logging.info("Loaded checkpoint sucessfully")
+
+
+# ------------------------------------------------------------------
+#  Hydrafreie Variante – lädt YAML direkt von Pfad
+# ------------------------------------------------------------------
+# sam2/build_sam.py
+from pathlib import Path
+from hydra import compose, initialize_config_dir
+from hydra.utils import instantiate
+from hydra.core.global_hydra import GlobalHydra          #  ← NEU
+from omegaconf import OmegaConf
+import torch, logging
+
+def build_sam2_local(cfg_path: str,
+                     ckpt_path: str | None = None,
+                     device: str = "cuda",
+                     mode: str = "eval"):
+    """
+    Lädt SAM-2 per Pfad – ohne Hydra-Search-Path-Magie.
+    """
+    cfg_path = Path(cfg_path).expanduser().resolve()
+    cfg_dir  = str(cfg_path.parent)
+    cfg_name = cfg_path.name
+
+    # ➜ Hydra ggf. zurücksetzen
+    if GlobalHydra.instance().is_initialized():
+        GlobalHydra.instance().clear()
+
+    # ➜ Context nur fürs YAML-Parsen öffnen
+    with initialize_config_dir(config_dir=cfg_dir,
+                               job_name="sam2_local",
+                               version_base=None):          # Warnung weg
+        cfg = compose(config_name=cfg_name)
+        OmegaConf.resolve(cfg)
+
+    # Modell bauen & ggf. Checkpoint laden
+    model = instantiate(cfg.model, _recursive_=True)
+    if ckpt_path:
+        from sam2.build_sam import _load_checkpoint
+        _load_checkpoint(model, ckpt_path)
+
+    model.to(device).eval() if mode == "eval" else model.to(device)
+    return model
+
+# sam2/build_sam.py  (unten direkt nach build_sam2_local)
+
+from hydra import compose, initialize_config_dir
+from hydra.core.global_hydra import GlobalHydra
+from hydra.utils import instantiate
+from omegaconf import OmegaConf
+from pathlib import Path
+
+def build_sam2_video_predictor_local(cfg_path: str,
+                                     ckpt_path: str | None = None,
+                                     device: str = "cuda",
+                                     mode: str = "eval"):
+    """
+    Hydrafreies Laden eines SAM-2 Video-Predictors über einen YAML-Dateipfad.
+    """
+    cfg_path = Path(cfg_path).expanduser().resolve()
+    cfg_dir  = str(cfg_path.parent)
+    cfg_name = cfg_path.stem          #  **ohne** ".yaml"
+
+    # Hydra ggf. zurücksetzen (nur ein Mal global erlaubt)
+    if GlobalHydra.instance().is_initialized():
+        GlobalHydra.instance().clear()
+
+    # Wir setzen _target_ per Override auf den Video-Predictor
+    overrides = ["++model._target_=sam2.sam2_video_predictor.SAM2VideoPredictor"]
+
+    with initialize_config_dir(config_dir=cfg_dir,
+                               job_name="sam2_video_local",
+                               version_base=None):
+        cfg = compose(config_name=cfg_name, overrides=overrides)
+        OmegaConf.resolve(cfg)
+
+    # Modell + (optional) Checkpoint
+    model = instantiate(cfg.model, _recursive_=True)
+    if ckpt_path:
+        _load_checkpoint(model, ckpt_path)
+
+    model.to(device)
+    if mode == "eval":
+        model.eval()
+    return model

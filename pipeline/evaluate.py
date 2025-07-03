@@ -136,6 +136,7 @@ def _make_predictor(model_size:str, ckpt:str|None, cfg:str|None):
     sam2_model = build_sam2(cfg, ckpt, device=device)
     return SAM2VideoPredictor(sam2_model)
 
+
 def _add_click_points(predictor, state, train_names:list[str]):
     """
     Fügt dem Predictor die Maskenpunkte der Trainingsbilder hinzu.

@@ -1,18 +1,18 @@
 
-# chmod +x pipeline/run_pipeline_configs.sh   
-# bash pipeline/run_pipeline_configs.sh
+# chmod +x pipeline/run_pipeline_configs_finetuned.sh   
+# bash pipeline/run_pipeline_configs_finetuned.sh
 
 
 set -euo pipefail
 
-# ------------------------------------------------------------
-# Basisordner für Eingabesequenz und Ausgabe
+
 SEQ_FOLDER="pipeline/resources/sequence_to_test_1"
 MASKS_BASE="pipeline/resources/generated_npz_masks_custom"
-# ⚠️ → Hier YAML und Checkpoint anpassen
-CFG_PATH="configs/<HIER_DEINE_YAML_DATEI>.yaml"
-CKPT_PATH="checkpoints/<HIER_DEIN_CHECKPOINT>.pt"
-# ------------------------------------------------------------
+
+CFG_PATH="configs/sam2.1/sam2.1_hiera_t"
+CKPT_PATH="checkpoints/sam2.1_hiera_tiny.pt"
+
+     # Passe den Pfad ggf. an!
 
 for N in {1..7}; do
   MASKS_FOLDER="${MASKS_BASE}/custom_n${N}"     # Zielordner für diesen Run
