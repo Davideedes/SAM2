@@ -2,8 +2,10 @@ from __future__ import annotations
 from pathlib import Path
 import time, datetime, json, tempfile, os, shutil
 import numpy as np
+import torch
 from PIL import Image
-from sam2.sam2_video_predictor import e
+from sam2.sam2_video_predictor import SAM2VideoPredictor
+from sam2.build_sam import build_sam2
 from .config import load_ground_truth,load_input_sample_pictures, LOG_DIR, TRAIN_DIR, TRAIN_NPZ_MASK_DIR
 from .vision import load_and_resize, save_mask_npz
 
@@ -12,6 +14,18 @@ TRAIN_SEQUENCE = load_input_sample_pictures()
 
 
 def _new_run_dict(**kwargs) -> dict:
+    """
+    Erstellt ein neues Log-Dictionary zur Laufzeitüberwachung.
+
+    Parameter
+    ----------
+    kwargs : dict
+        Muss enthalten: model_size, n_train, seq_folder, masks_folder
+
+    Returns
+    -------
+    dict : Leere Logstruktur mit Metadaten
+    """
     return {
         "timestamp":   datetime.datetime.now().isoformat(timespec="seconds"),
         "model_size":  kwargs["model_size"],
@@ -23,10 +37,43 @@ def _new_run_dict(**kwargs) -> dict:
         "per_image": [], "runtime_seconds": 0.0,
     }
 
-def run(n_train:int, model_size:str, seq_folder:str|Path, masks_folder:str|Path|None=None):
+def run(
+    n_train:int,
+    model_size:str,
+    seq_folder:str|Path,
+    masks_folder:str|Path|None = None,
+    ckpt_path:str|None = None,
+    cfg_path:str|None  = None,
+):
+    """
+Hauptlogik für Cross-Image-Transfer mit SAM2-Video-Predictor.
+
+run(...)
+-------
+Parameters
+----------
+n_train : int
+    Zahl der Trainingsframes (1–7).  
+model_size : str
+    "tiny" | "small" | "base" | "large" | "custom"  
+seq_folder : str | Path
+    Ordner mit Sequenzbildern.  
+masks_folder : str | Path | None
+    Zielordner für NPZ-Masken (optional).  
+ckpt_path, cfg_path : str | None
+    Lokaler Checkpoint & YAML (nur bei model_size=="custom").
+
+Returns
+-------
+frames : list[np.ndarray]
+segments : dict[int, dict[int, np.ndarray]]
+names : list[str]
+"""
     start = time.time()
     seq_folder  = Path(seq_folder)
-    masks_folder= Path(masks_folder) if masks_folder else None
+    masks_folder = Path(masks_folder) if masks_folder else None
+    if masks_folder:
+       masks_folder.mkdir(parents=True, exist_ok=True)
     run_log     = _new_run_dict(n_train=n_train, model_size=model_size,
                                 seq_folder=seq_folder, masks_folder=masks_folder)
     if n_train > len(TRAIN_SEQUENCE):
@@ -42,16 +89,13 @@ def run(n_train:int, model_size:str, seq_folder:str|Path, masks_folder:str|Path|
     if missing:
         raise FileNotFoundError(f"Fehlende Trainingsbilder: {missing}")
 
-    if n_train > len(train_paths):
-        raise ValueError(f"n_train ({n_train}) liegt über der Anzahl verfügbarer Trainingsbilder ({len(train_paths)})")
-
-    train_paths = train_paths[:n_train]
     train_imgs  = [Image.open(p).convert("RGB") for p in train_paths]
 
     tgt_size    = min(i.width for i in train_imgs), min(i.height for i in train_imgs)
     train_np    = [np.array(i.resize(tgt_size, Image.LANCZOS)) for i in train_imgs]
 
-    predictor = SAM2VideoPredictor.from_pretrained(f"facebook/sam2-hiera-{model_size}")
+    predictor = _make_predictor(model_size, ckpt_path, cfg_path)
+
 
     seq_paths   = sorted(p for p in seq_folder.iterdir()
                          if p.suffix.lower() in {".jpg",".jpeg",".png"})
@@ -76,7 +120,26 @@ def run(n_train:int, model_size:str, seq_folder:str|Path, masks_folder:str|Path|
     return all_frames, all_segments, [p.name for p in seq_paths]
 
 # --- Helfer ----------------------------------------------------
+def _make_predictor(model_size:str, ckpt:str|None, cfg:str|None):
+    """
+    Erstellt den passenden SAM2VideoPredictor (pretrained oder lokal).
+
+    Returns
+    -------
+    SAM2VideoPredictor
+    """
+    if model_size != "custom":
+        return SAM2VideoPredictor.from_pretrained(f"facebook/sam2-hiera-{model_size}")
+    if not (ckpt and cfg):
+        raise ValueError("Für model_size=custom müssen --cfg-path und --ckpt-path gesetzt sein")
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    sam2_model = build_sam2(cfg, ckpt, device=device)
+    return SAM2VideoPredictor(sam2_model)
+
 def _add_click_points(predictor, state, train_names:list[str]):
+    """
+    Fügt dem Predictor die Maskenpunkte der Trainingsbilder hinzu.
+    """
     for i, name in enumerate(train_names):
 
         data = np.load(TRAIN_NPZ_MASK_DIR/f"train_mask_{os.path.splitext(name)[0]}.npz")
@@ -85,11 +148,22 @@ def _add_click_points(predictor, state, train_names:list[str]):
 
 
 def _propagate(predictor, state):
+    """
+    Führt die Maskenpropagation über alle Frames durch.
+
+    Returns
+    -------
+    dict[int, dict[int, np.ndarray]]
+        segment_id → Maske für jedes Frame
+    """
     out = {}
     for f_idx, ids, logits in predictor.propagate_in_video(state):
         out[f_idx] = {oid:(logits[i]>0).cpu().numpy() for i,oid in enumerate(ids)}
     return out
 def _update_metrics(log:dict, img_name:str, segs:dict, masks_folder:Path|None):
+    """
+    Aktualisiert die Auswertungsmetriken und speichert ggf. die Maske.
+    """
     stem = Path(img_name).stem
     exp  = GROUND_TRUTH.get(stem, False)
     found = bool(1 in segs and segs[1].sum() > 0)
@@ -109,6 +183,9 @@ def _update_metrics(log:dict, img_name:str, segs:dict, masks_folder:Path|None):
     else:                    log["true_negatives"]  += 1
 
 def _write_log(log:dict):
+    """
+    Speichert das Log als JSON im Log-Verzeichnis.
+    """
     ts = log["timestamp"].replace(":","-").replace("T","_")
     name = f"Model{log['model_size']}_nTrain{log['n_train']}_{ts}.json"
     with open(LOG_DIR/name,"w",encoding="utf-8") as fh:
