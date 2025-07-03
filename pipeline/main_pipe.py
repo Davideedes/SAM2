@@ -10,82 +10,14 @@ import json
 import datetime
 import time
 import argparse
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from pathlib import Path
 from sam2.sam2_video_predictor import SAM2VideoPredictor
 ####################################################################################################
-
 LOG_DIR = "logs"      
 os.makedirs(LOG_DIR, exist_ok=True)
-
-ground_truth = {
-    "600234825378353": False,
-    "539037624915774": False,
-    "968626133944738": False,
-    "296134512063765": True,
-    "2183222621861582": False,
-    "900484341229742": False,
-    "699547931969307": False,
-    "1207079423611781": True,
-    "600284248638387": False,
-    "1933883046948570": False,
-    "1392211998201369": False,
-    "293654665647732": True,
-    "1084558642946786": False,
-    "156567849760040": True,
-    "3929816854006196": True,
-    "1969647903182374": True,
-    "1316023229129292": False,
-    "159169470045989": False,
-    "933059714605078": False,
-    "2086818021517027": False,
-    "133763585410017": True,
-    "528958382754914": False,
-    "761794412794226": False,
-    "3519886001580000": False,
-    "225307656701224": True,
-    "153687263398545": True,
-    "496748668144453": False,
-    "297333548545759": False,
-    "248550337023183": False,
-    "206307738697485": False,
-    "162504769139920": True,
-    "1285029535699522": False,
-    "218423267526846": False,
-    "1947782532230929": False,
-    "1607397469702849": False,
-    "3407607062790162": False,
-    "694820872645465": False,
-    "753553316278818": False,
-    "4118924161464361": True,
-    "588806949941319": False,
-    "1529193104275031": False,
-    "630792852391348": False,
-    "137496905033902": False,
-    "961729745740668": False,
-    "5835345579927252": False,
-    "2846149118958684": True,
-    "199931331957826": True,
-    "1267823477007713": False,
-    "4423489001108853": False,
-    "909202196973702": False,
-    "1188829775108914": False,
-    "953762002733107": False,
-    "609992730688692": False,
-    "427180291932701": True,
-    "1150488025378390": True,
-    "6308437819176616": False,
-    "1640108929745447": True,
-    "515767156244364": False,
-    "740633213277185": False,
-    "2285155878324613": False,
-    "228555592368313": False,
-    "1373675990142727": False,
-    "985985122625097": False,
-    "925352545321824": False,
-    "131431262278312": True,
-    "609733057343978": False,
-}
-
+config_path = Path(__file__).parent / "ground_truth_config.json"
+with open(config_path, "r") as f:
+    GROUND_TRUTH = json.load(f)
 ####################################################################################################
 def _new_run_dict(ts, n_train, model_size, seq_folder, masks_folder):
     return {
@@ -103,7 +35,7 @@ def _new_run_dict(ts, n_train, model_size, seq_folder, masks_folder):
         "false_negatives": 0,
         "false_positives": 0,
 
-        "per_image": []        # hier hängen wir später dicts an
+        "per_image": []    
     }
 
 
@@ -164,7 +96,7 @@ def run_cross_image_transfer(n_train, model_size, seq_folder, masks_folder = Non
 
         def is_expected_pothole(name: str) -> bool:
             name_lower = name.lower()
-            return EXPECTED_POTHOLES.get(name_lower, False)
+            return GROUND_TRUTH.get(name_lower, False)
         img_name   = seq_image_names[seq_idx]
         expected = is_expected_pothole(img_name)
         mask       = all_video_segments[seq_idx].get(1, True)
@@ -266,6 +198,9 @@ def run_cross_image_transfer(n_train, model_size, seq_folder, masks_folder = Non
     print(f"Gefundene Sequenzbilder: {len(seq_image_names)}")
     print(f"Verarbeitete Frames: {len(all_frames)}")
     ImageBrowser(all_frames, all_video_segments, seq_image_names)
+
+
+
 
 
 

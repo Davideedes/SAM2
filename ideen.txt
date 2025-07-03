@@ -1,7 +1,0 @@
-1 facade information from mapillary
-2 Underwater segmentation testen ob es funktioniert
-3 faced informationen aus Dronen 
-4 Autos erkennen -> SAM + classification algorithm (Nicos Video)
-5 Kriegsluftbilder
-5 Verkehr/Passenger zählen
-6 Schlaglöcher erkennen 
