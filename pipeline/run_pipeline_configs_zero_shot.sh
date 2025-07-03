@@ -1,0 +1,35 @@
+
+# chmod +x pipeline/run_pipeline_configs.sh   
+# bash pipeline/run_pipeline_configs.sh
+
+
+#!/usr/bin/env bash
+set -euo pipefail
+
+# ------------------------------------------------------------
+# Basisordner für Sequenz und Masken (ggf. anpassen)
+SEQ_FOLDER="pipeline/resources/sequence_to_test_1"
+MASKS_BASE="pipeline/resources/generated_npz_masks_from_run"
+# ------------------------------------------------------------
+
+MODELS=( tiny small base large )
+
+for MODEL in "${MODELS[@]}"; do
+  for N in {1..7}; do
+    MASKS_FOLDER="${MASKS_BASE}/${MODEL}_n${N}"   # eindeutiger Unterordner
+    mkdir -p "${MASKS_FOLDER}"                    # legt ihn an, falls nicht existent
+
+    echo "=========================================================="
+    echo "➡️  Starte: model_size=${MODEL} | n_train=${N}"
+    echo "----------------------------------------------------------"
+    python3 -m pipeline.cli \
+        --model-size   "${MODEL}" \
+        --n-train      "${N}" \
+        --seq-folder   "${SEQ_FOLDER}" \
+        --masks-folder "${MASKS_FOLDER}"
+    echo "✅  Fertig:  model_size=${MODEL} | n_train=${N}"
+    echo
+  done
+done
+
+echo "🎉 Alle Kombinationen abgeschlossen."

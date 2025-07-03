@@ -12,7 +12,7 @@ def main() -> None:
 
     frames, segs, names = run(args.n_train, args.model_size,
                               args.seq_folder, args.masks_folder)
-    ImageBrowser(frames, segs, names)
+    #ImageBrowser(frames, segs, names)
 
 if __name__ == "__main__":
     main()

@@ -19,11 +19,21 @@ class ImageBrowser:
 
     def _title(self): self.ax.set_title(f"{self.names[self.i]} ({self.i+1}/{self.n})")
     def _draw_mask(self):
-        if self.mask: self.mask.remove()
+        # Vorherige Maske entfernen
+        if self.mask is not None:
+            self.mask.remove()
+            self.mask = None
+
+        # Gibt es für das aktuelle Bild (Index self.i) eine Maske mit ID 1?
         if 1 in self.seg.get(self.i, {}):
-            m = self.seg[self.i][1]
-            rgba = np.array([1,0,0,0.6]); h,w = m.shape
-            self.mask = self.ax.imshow(m.reshape(h,w,1)*rgba)
+            m = self.seg[self.i][1]      # Maske holen (Shape: (H,W) oder (1,H,W))
+            m2d = m.squeeze()            # (1,H,W) → (H,W)
+            h, w = m2d.shape
+
+            rgba = np.array([1, 0, 0, 0.6])               # Rot + Alpha
+            mask_img = m2d.reshape(h, w, 1) * rgba.reshape(1, 1, -1)
+            self.mask = self.ax.imshow(mask_img)
+
     def _step(self, d):
         if 0 <= self.i+d < self.n:
             self.i += d
