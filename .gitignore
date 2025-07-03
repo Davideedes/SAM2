@@ -15,4 +15,7 @@ demo/backend/checkpoints/*.pt
 florence2-base/*
 florence2/florence2-base/*
 notebooks/videos
+output/*
+train_masks/*
+
 

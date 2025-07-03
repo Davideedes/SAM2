@@ -93,5 +93,5 @@ if final_mask is not None:
     from PIL import Image as PILImage
     mask_to_save = (final_mask > 0).astype(np.uint8) * 255
     pil_mask = PILImage.fromarray(mask_to_save)
-    # pil_mask.save(r"erste_anwendung/masks/finale_maske.png")
-    # print("Finale Maske gespeichert als finale_maske.png")
+    pil_mask.save(r"erste_anwendung/masks/finale_maske.png")
+    print("Finale Maske gespeichert als finale_maske.png")
