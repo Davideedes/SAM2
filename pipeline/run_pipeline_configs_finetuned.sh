@@ -9,8 +9,10 @@ set -euo pipefail
 SEQ_FOLDER="pipeline/resources/sequence_to_test_1"
 MASKS_BASE="pipeline/resources/generated_npz_masks_custom"
 
-CFG_PATH="configs/sam2.1/sam2.1_hiera_t"
-CKPT_PATH="checkpoints/sam2.1_hiera_tiny.pt"
+# CFG_PATH="configs/sam2.1/sam2.1_hiera_t"
+# CKPT_PATH="checkpoints/sam2.1_hiera_tiny.pt"
+CFG_PATH="sam2_hiera_t"
+CKPT_PATH="checkpoints/fine_tuned_sam2_6000.pt"
 
      # Passe den Pfad ggf. an!
 
