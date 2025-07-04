@@ -160,6 +160,7 @@ def build_sam2_video_predictor_hf(model_id, **kwargs):
         config_file=config_name, ckpt_path=ckpt_path, **kwargs
     )
 
+
 def _load_checkpoint(model, ckpt_path):
     if ckpt_path is not None:
         sd = torch.load(ckpt_path, map_location="cpu", weights_only=True)["model"]
@@ -171,4 +172,3 @@ def _load_checkpoint(model, ckpt_path):
             logging.error(unexpected_keys)
             raise RuntimeError()
         logging.info("Loaded checkpoint sucessfully")
-        
