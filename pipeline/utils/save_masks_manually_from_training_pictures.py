@@ -10,8 +10,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 from sam2.sam2_video_predictor import SAM2VideoPredictor
 
 # Zielordner für Masken
-mask_dir = "training_pictures_masks"
-os.makedirs(mask_dir, exist_ok=True)
+mask_dir = "pipeline/resources/masks_from_input_pictures_npz_format"
+
 
 # Trainingsbilder
 train_image_names = [
@@ -24,7 +24,8 @@ train_image_names = [
   "1215669212538799.jpg"
 ]
 
-train_image_paths = [os.path.join("testbilder", name) for name in train_image_names]
+
+train_image_paths = [os.path.join("pipeline/resources/input_pictures", name) for name in train_image_names]
 
 # Bilder laden und auf kleinste Auflösung bringen
 imgs = [Image.open(p).convert("RGB") for p in train_image_paths]
