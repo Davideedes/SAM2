@@ -1,5 +1,7 @@
-
+## DAS HIER EINMAL INS TERMINAL##
 # chmod +x pipeline/run_pipeline_configs_finetuned.sh   
+
+## HIERMIT STARTEN ## 
 # bash pipeline/run_pipeline_configs_finetuned.sh
 
 
