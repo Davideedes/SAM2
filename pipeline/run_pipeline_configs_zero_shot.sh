@@ -1,5 +1,7 @@
-
+######################## DAS HIER NUR 1x AUSFÜHREN
 # chmod +x pipeline/run_pipeline_configs_zero_shot.sh   
+
+#################### HIERMIT SKRIPT AUSFÜHREN
 # bash pipeline/run_pipeline_configs_zero_shot.sh
 
 
@@ -8,7 +10,7 @@ set -euo pipefail
 
 SEQ_FOLDER="pipeline/resources/sequence_to_test_1"
 MASKS_BASE="pipeline/resources/generated_npz_masks_from_run"
-MODELS=( tiny small base large )
+MODELS=( small )
 
 for MODEL in "${MODELS[@]}"; do
   for N in {1..7}; do
