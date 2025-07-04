@@ -14,8 +14,6 @@ MASKS_BASE="pipeline/resources/generated_npz_masks_custom"
 CFG_PATH="sam2_hiera_t"
 CKPT_PATH="checkpoints/fine_tuned_sam2_6000.pt"
 
-     # Passe den Pfad ggf. an!
-
 for N in {1..7}; do
   MASKS_FOLDER="${MASKS_BASE}/custom_n${N}"     # Zielordner für diesen Run
   mkdir -p "${MASKS_FOLDER}"                    # Anlegen, falls nötig

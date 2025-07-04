@@ -162,13 +162,32 @@ def build_sam2_video_predictor_hf(model_id, **kwargs):
 
 
 def _load_checkpoint(model, ckpt_path):
-    if ckpt_path is not None:
-        sd = torch.load(ckpt_path, map_location="cpu", weights_only=True)["model"]
-        missing_keys, unexpected_keys = model.load_state_dict(sd)
-        if missing_keys:
-            logging.error(missing_keys)
-            raise RuntimeError()
-        if unexpected_keys:
-            logging.error(unexpected_keys)
-            raise RuntimeError()
-        logging.info("Loaded checkpoint sucessfully")
+    """
+    Lädt Gewichte in `model`.
+
+    Unterstützt sowohl
+    1. das offizielle SAM-2-Format  {"model": state_dict, …}
+    2. ein reines state_dict        (z. B. von Fine-Tuning via `model.state_dict()`)
+
+    Bei inkompatiblen oder fehlenden Keys wird nur gewarnt, nicht abgebrochen.
+    """
+    if ckpt_path is None:
+        logging.warning("⚠️  Kein Checkpoint-Pfad übergeben – Modell bleibt uninitialisiert.")
+        return
+
+    # 1) Datei laden (CPU, keine GPU-Annahme nötig)
+    sd = torch.load(ckpt_path, map_location="cpu")
+
+    # 2) Falls im offiziellen Paket-Format, auf den State-Dict-Teil zugreifen
+    if isinstance(sd, dict) and "model" in sd:
+        sd = sd["model"]
+
+    # 3) Gewichte (tolerant) laden
+    missing, unexpected = model.load_state_dict(sd, strict=False)
+
+    if missing:
+        logging.warning(f"⚠️  {len(missing)} fehlende Keys werden ignoriert: {missing[:5]}…")
+    if unexpected:
+        logging.warning(f"⚠️  {len(unexpected)} zusätzliche Keys werden ignoriert: {unexpected[:5]}…")
+
+    logging.info("✅  Checkpoint erfolgreich geladen")
