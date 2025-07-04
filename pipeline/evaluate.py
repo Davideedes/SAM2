@@ -5,7 +5,7 @@ import numpy as np
 import torch
 from PIL import Image
 from sam2.sam2_video_predictor import SAM2VideoPredictor
-from sam2.build_sam import build_sam2
+from sam2.build_sam import build_sam2_video_predictor
 from .config import load_ground_truth,load_input_sample_pictures, LOG_DIR, TRAIN_DIR, TRAIN_NPZ_MASK_DIR
 from .vision import load_and_resize, save_mask_npz
 
@@ -133,8 +133,8 @@ def _make_predictor(model_size:str, ckpt:str|None, cfg:str|None):
     if not (ckpt and cfg):
         raise ValueError("Für model_size=custom müssen --cfg-path und --ckpt-path gesetzt sein")
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    sam2_model = build_sam2(cfg, ckpt, device=device)
-    return SAM2VideoPredictor(sam2_model)
+    predictor = build_sam2_video_predictor(cfg, ckpt, device=device)
+    return predictor
 
 
 def _add_click_points(predictor, state, train_names:list[str]):
