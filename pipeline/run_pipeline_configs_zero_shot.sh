@@ -10,7 +10,7 @@ set -euo pipefail
 
 SEQ_FOLDER="pipeline/resources/sequence_to_test_1"
 MASKS_BASE="pipeline/resources/generated_npz_masks_from_run"
-MODELS=( tiny )
+MODELS=( large )
 
 for MODEL in "${MODELS[@]}"; do
   for N in {1..7}; do

@@ -50,7 +50,7 @@ from .browser import ImageBrowser
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--n-train", type=int, default=5)
-    ap.add_argument("--model-size", choices=("tiny","small", "base","large", "custom"), default="tiny")
+    ap.add_argument("--model-size", choices=("tiny","small", "base-plus","large", "custom"), default="tiny")
     ap.add_argument("--seq-folder", required=True)
     ap.add_argument("--masks-folder")  
     ap.add_argument("--cfg-path")    # nur nötig bei --model-size custom
