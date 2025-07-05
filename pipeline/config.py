@@ -5,7 +5,7 @@ _ROOT = Path(__file__).resolve().parent
 RES  = _ROOT / "resources"
 RESOURCE_DIR = Path(__file__).parent / "resources"
 TRAIN_DIR = RESOURCE_DIR / "input_pictures"
-TRAIN_NPZ_MASK_DIR = RESOURCE_DIR / "masks_from_input_pictures_npz_format"
+TRAIN_NPZ_MASK_DIR = RESOURCE_DIR / "input_pictures_npz_masks_ground_truth"
 LOG_DIR = (_ROOT / "logs").resolve()
 LOG_DIR.mkdir(exist_ok=True)
 
