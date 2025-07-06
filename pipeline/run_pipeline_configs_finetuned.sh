@@ -14,7 +14,7 @@ MASKS_BASE="pipeline/resources/generated_npz_masks_custom"
 ############# HIER PFAD ANPASSEN
 # ACHTUNG CONFIG OHNE ".yaml"
 CFG_PATH="sam2_hiera_t"
-CKPT_PATH="checkpoints/fine_tuned_sam2_6000.pt"
+CKPT_PATH="checkpoints/fine_tuned_sam2_6500.pt"
 #######################
 
 for N in {1..7}; do
