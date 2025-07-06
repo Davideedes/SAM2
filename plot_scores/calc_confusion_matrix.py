@@ -33,4 +33,4 @@ def calc_confusion_matrix(path):
     print(f"Confusion matrix saved to {output_filename}")
 
 if __name__ == "__main__":
-    calc_confusion_matrix("input2.json")
+    calc_confusion_matrix("input.json")

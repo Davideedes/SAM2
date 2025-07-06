@@ -8,7 +8,7 @@ from sam2.automatic_mask_generator import SAM2AutomaticMaskGenerator
 
 # 2. Bild laden
 # Das Bild wird von der Festplatte geladen und in ein RGB-Bild umgewandelt.
-image_path = r"testbilder\CLXQ7779.JPG"
+image_path = r"testbilder\presentation.jpg"
 image = Image.open(image_path).convert("RGB")  # Bild öffnen und in RGB konvertieren
 image_np = np.array(image)  # In ein numpy-Array umwandeln (für das Modell)
 
