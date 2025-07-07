@@ -41,7 +41,7 @@ def plot_metrics(paths):
     # Funktion zum Plotten für beide x-Achsen
     def plot_for_x_axis(x_axis, output_dir):
         for metric in metrics:
-            plt.figure(figsize=(8, 5))  # Kleinere Abbildung
+            plt.figure(figsize=(10, 5))  # Kleinere Abbildung
             # Daten sortieren nach der x-Achse für eine saubere Kurve
             combined_df_sorted = combined_df.sort_values(by=x_axis)
             plt.plot(combined_df_sorted[x_axis], combined_df_sorted[metric], marker='o', linestyle='-', color='blue')
@@ -65,7 +65,7 @@ def plot_metrics(paths):
             plt.close()
 
         # Kombinierter Plot für tp, tn, fp, fn
-        plt.figure(figsize=(8, 5))  # Kleinere Abbildung
+        plt.figure(figsize=(10, 5))  # Kleinere Abbildung
         combined_df_sorted = combined_df.sort_values(by=x_axis)
         for metric in ["true_positives", "true_negatives", "false_positives", "false_negatives"]:
             plt.plot(combined_df_sorted[x_axis], combined_df_sorted[metric], marker='o', linestyle='-', label=metric.replace("_", " ").capitalize())
@@ -74,28 +74,30 @@ def plot_metrics(paths):
         plt.ylabel("Values", fontsize=14)  # Größere Schriftgröße
         if x_axis == "n_train":
             plt.xticks(combined_df_sorted[x_axis], fontsize=12)
-        plt.legend(fontsize=12)  # Größere Schriftgröße für Legende
+        plt.legend(fontsize=12, bbox_to_anchor=(1.05, 0), loc='lower left')  # Legende außerhalb unten rechts
         plt.grid(True)
         filename = f"{x_axis}_vs_confusion_matrix_values.svg"
         filepath = os.path.join(output_dir, filename)
-        plt.savefig(filepath, format="svg")
+        plt.tight_layout()  # Layout anpassen für bessere Darstellung
+        plt.savefig(filepath, format="svg", bbox_inches='tight')
         plt.close()
 
         # Kombinierter Plot für Acc, Prec, Recall, F1
-        plt.figure(figsize=(8, 5))  # Kleinere Abbildung
+        plt.figure(figsize=(10, 5))  # Kleinere Abbildung
         for metric in ["accuracy", "precision", "recall", "f1_score"]:
             plt.plot(combined_df_sorted[x_axis], combined_df_sorted[metric], marker='o', linestyle='-', label=metric.replace("_", " ").capitalize())
         x_label = "Number of Input Images" if x_axis == "n_train" else "Model Size"
         plt.xlabel(x_label, fontsize=14)  # Größere Schriftgröße
-        plt.ylabel("Metrics", fontsize=14)  # Größere Schriftgröße
+        plt.ylabel("Values", fontsize=14)  # Größere Schriftgröße
         plt.ylim(0, 1.05)  # Y-Achse immer von 0 bis 1.05
         if x_axis == "n_train":
             plt.xticks(combined_df_sorted[x_axis], fontsize=12)
-        plt.legend(fontsize=14)  # Größere Schriftgröße für Legende
+        plt.legend(fontsize=14, bbox_to_anchor=(1.05, 0), loc='lower left')  # Legende außerhalb unten rechts
         plt.grid(True)
         filename = f"{x_axis}_vs_performance_metrics.svg"
         filepath = os.path.join(output_dir, filename)
-        plt.savefig(filepath, format="svg")
+        plt.tight_layout()  # Layout anpassen für bessere Darstellung
+        plt.savefig(filepath, format="svg", bbox_inches='tight')
         plt.close()
 
     # Plots für beide x-Achsen erstellen
@@ -105,5 +107,14 @@ def plot_metrics(paths):
     print(f"Plots wurden im Ordner '{base_output_dir}' gespeichert.")
 
 # Beispielaufruf
-paths = ["input", "input2"]
+# size = "tiny"
+input1= "Modeltiny_nTrain1"
+input2= "Modeltiny_nTrain2"
+input3= "Modeltiny_nTrain3"
+input4= "Modeltiny_nTrain4"
+input5= "Modeltiny_nTrain5"
+input6= "Modeltiny_nTrain6"
+input7= "Modeltiny_nTrain7"
+
+paths = [input1, input2, input3, input4, input5, input6, input7]
 plot_metrics(paths)
