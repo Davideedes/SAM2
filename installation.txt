@@ -58,3 +58,35 @@ pywin32==310 aus der requirements.txt raus,
 
 
 pywin32==310
+
+
+
+
+
+
+Jannik ToDo 
+
+-- einen Ordner "Yolo", da alles zu Yolo rein + docstrings/readme zu jedem Skript 
+    --> Zweck des Skriptes
+-- Installationsanleitung Yolo + requirements.txt 
+-- hat jetzt YOLO trainiert
+
+Nico ToDo
+-- Pipeline bauen Yolo first, dann Yolo Output in SAM rein --> laufen lasse + David Skripte drüber zum Plotten
+-- SAM Training: SAM den Output von Yolo als Koordinaten an SAM geben -- SAM einstellen, dass es mit Bounding Box arbeiten kann -- ggf. mit David 
+--> denke das bis donnerstag versuchen 
+-- evtl: 20 gute Pothole Bilder suchen  -- wenn pipeline schnell fertig sein sollte 
+
+-- Analyseteil im Paper, ggf. Fazit + Ausblick 
+
+David To Do
+-- Skripte ins Repo packen zum Plotten
+-- 
+-- Abbildungen + Analyseteil überarbeiten/kontrollieren
+-- Nico unterstützen
+
+
+Kes ToDo
+-- Vergleich mit ähnlichen arbeiten - was wurde schon in der Vergangenheit gemacht - herleiten warum wir so arbeiten wie wir es machen + im Paper den Teil dazu schreiben
+-- Einleitung schreiben
+
