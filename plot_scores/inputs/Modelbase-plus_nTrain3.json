@@ -1,15 +1,15 @@
 {
-  "timestamp": "2025-07-06T17:34:08",
-  "model_size": "tiny",
-  "n_train": 1,
+  "timestamp": "2025-07-06T17:56:59",
+  "model_size": "base-plus",
+  "n_train": 3,
   "seq_folder": "sequence_to_test_1",
-  "masks_folder": "tiny_n1",
+  "masks_folder": "base-plus_n3",
   "expected_total": 20,
-  "found_total": 3,
-  "true_positives": 3,
-  "true_negatives": 21,
-  "false_negatives": 17,
-  "false_positives": 0,
+  "found_total": 11,
+  "true_positives": 6,
+  "true_negatives": 16,
+  "false_negatives": 14,
+  "false_positives": 5,
   "per_image": [
     {
       "img_name": "1150488025378390.jpg",
@@ -26,8 +26,8 @@
     {
       "img_name": "135253878628490.jpg",
       "expected": false,
-      "found": false,
-      "type": "tn"
+      "found": true,
+      "type": "fp"
     },
     {
       "img_name": "1432956667044194.jpg",
@@ -80,14 +80,14 @@
     {
       "img_name": "2092280197578815.jpg",
       "expected": true,
-      "found": false,
-      "type": "fn"
+      "found": true,
+      "type": "tp"
     },
     {
       "img_name": "228555592368313.jpg",
       "expected": true,
-      "found": true,
-      "type": "tp"
+      "found": false,
+      "type": "fn"
     },
     {
       "img_name": "264710655348649.jpg",
@@ -98,14 +98,14 @@
     {
       "img_name": "275010177638445.jpg",
       "expected": true,
-      "found": false,
-      "type": "fn"
+      "found": true,
+      "type": "tp"
     },
     {
       "img_name": "283829646791470.jpg",
       "expected": false,
-      "found": false,
-      "type": "tn"
+      "found": true,
+      "type": "fp"
     },
     {
       "img_name": "292432549038685.jpg",
@@ -116,8 +116,8 @@
     {
       "img_name": "303634461227577.jpg",
       "expected": false,
-      "found": false,
-      "type": "tn"
+      "found": true,
+      "type": "fp"
     },
     {
       "img_name": "309200677408951.jpg",
@@ -128,8 +128,8 @@
     {
       "img_name": "316571519817000.jpg",
       "expected": false,
-      "found": false,
-      "type": "tn"
+      "found": true,
+      "type": "fp"
     },
     {
       "img_name": "358071033113221.jpg",
@@ -152,8 +152,8 @@
     {
       "img_name": "483295859627730.jpg",
       "expected": true,
-      "found": false,
-      "type": "fn"
+      "found": true,
+      "type": "tp"
     },
     {
       "img_name": "490280405617271.jpg",
@@ -212,8 +212,8 @@
     {
       "img_name": "770837453577013.jpg",
       "expected": true,
-      "found": false,
-      "type": "fn"
+      "found": true,
+      "type": "tp"
     },
     {
       "img_name": "801126600518934.jpg",
@@ -254,9 +254,9 @@
     {
       "img_name": "968298413979608.jpg",
       "expected": false,
-      "found": false,
-      "type": "tn"
+      "found": true,
+      "type": "fp"
     }
   ],
-  "runtime_seconds": 39.424
+  "runtime_seconds": 96.123
 }

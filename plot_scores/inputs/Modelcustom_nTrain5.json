@@ -1,14 +1,14 @@
 {
-  "timestamp": "2025-07-06T17:34:08",
-  "model_size": "tiny",
-  "n_train": 1,
+  "timestamp": "2025-07-07T00:24:34",
+  "model_size": "custom",
+  "n_train": 5,
   "seq_folder": "sequence_to_test_1",
-  "masks_folder": "tiny_n1",
+  "masks_folder": "custom_n5",
   "expected_total": 20,
-  "found_total": 3,
-  "true_positives": 3,
+  "found_total": 2,
+  "true_positives": 2,
   "true_negatives": 21,
-  "false_negatives": 17,
+  "false_negatives": 18,
   "false_positives": 0,
   "per_image": [
     {
@@ -86,8 +86,8 @@
     {
       "img_name": "228555592368313.jpg",
       "expected": true,
-      "found": true,
-      "type": "tp"
+      "found": false,
+      "type": "fn"
     },
     {
       "img_name": "264710655348649.jpg",
@@ -230,8 +230,8 @@
     {
       "img_name": "828536674427803.jpg",
       "expected": true,
-      "found": true,
-      "type": "tp"
+      "found": false,
+      "type": "fn"
     },
     {
       "img_name": "845409816378785.jpg",
@@ -248,8 +248,8 @@
     {
       "img_name": "926680828155459.jpg",
       "expected": true,
-      "found": false,
-      "type": "fn"
+      "found": true,
+      "type": "tp"
     },
     {
       "img_name": "968298413979608.jpg",
@@ -258,5 +258,5 @@
       "type": "tn"
     }
   ],
-  "runtime_seconds": 39.424
+  "runtime_seconds": 97.549
 }

@@ -1,14 +1,14 @@
 {
-  "timestamp": "2025-07-06T17:34:08",
-  "model_size": "tiny",
-  "n_train": 1,
+  "timestamp": "2025-07-06T18:23:11",
+  "model_size": "large",
+  "n_train": 6,
   "seq_folder": "sequence_to_test_1",
-  "masks_folder": "tiny_n1",
+  "masks_folder": "large_n6",
   "expected_total": 20,
-  "found_total": 3,
-  "true_positives": 3,
+  "found_total": 4,
+  "true_positives": 4,
   "true_negatives": 21,
-  "false_negatives": 17,
+  "false_negatives": 16,
   "false_positives": 0,
   "per_image": [
     {
@@ -86,8 +86,8 @@
     {
       "img_name": "228555592368313.jpg",
       "expected": true,
-      "found": true,
-      "type": "tp"
+      "found": false,
+      "type": "fn"
     },
     {
       "img_name": "264710655348649.jpg",
@@ -122,8 +122,8 @@
     {
       "img_name": "309200677408951.jpg",
       "expected": true,
-      "found": true,
-      "type": "tp"
+      "found": false,
+      "type": "fn"
     },
     {
       "img_name": "316571519817000.jpg",
@@ -152,8 +152,8 @@
     {
       "img_name": "483295859627730.jpg",
       "expected": true,
-      "found": false,
-      "type": "fn"
+      "found": true,
+      "type": "tp"
     },
     {
       "img_name": "490280405617271.jpg",
@@ -176,8 +176,8 @@
     {
       "img_name": "515634443132461.jpg",
       "expected": true,
-      "found": false,
-      "type": "fn"
+      "found": true,
+      "type": "tp"
     },
     {
       "img_name": "526584771844886.jpg",
@@ -212,8 +212,8 @@
     {
       "img_name": "770837453577013.jpg",
       "expected": true,
-      "found": false,
-      "type": "fn"
+      "found": true,
+      "type": "tp"
     },
     {
       "img_name": "801126600518934.jpg",
@@ -230,14 +230,14 @@
     {
       "img_name": "828536674427803.jpg",
       "expected": true,
-      "found": true,
-      "type": "tp"
+      "found": false,
+      "type": "fn"
     },
     {
       "img_name": "845409816378785.jpg",
       "expected": true,
-      "found": false,
-      "type": "fn"
+      "found": true,
+      "type": "tp"
     },
     {
       "img_name": "852574285611373.jpg",
@@ -258,5 +258,5 @@
       "type": "tn"
     }
   ],
-  "runtime_seconds": 39.424
+  "runtime_seconds": 305.052
 }

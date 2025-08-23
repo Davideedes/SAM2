@@ -31,9 +31,12 @@ def plot_metrics(paths):
     combined_df = pd.concat(dfs, ignore_index=True)
 
     # Reihenfolge für model_size definieren
-    model_size_order = ["tiny", "small", "base_plus", "large"]
-    combined_df["model_size"] = pd.Categorical(combined_df["model_size"], categories=model_size_order, ordered=True)
+    # model_size_order = ["tiny", "small", "base-plus", "large"]
+    # combined_df["model_size"] = pd.Categorical(combined_df["model_size"], categories=model_size_order, ordered=True)
 
+    model_size_order = ["tiny", "small", "base-plus", "large", "custom"]
+    combined_df["model_size"] = pd.Categorical(combined_df["model_size"], categories=model_size_order, ordered=True)
+ 
     # Metriken, die geplottet werden sollen
     metrics = ["true_positives", "false_positives", "true_negatives", "false_negatives", 
                "precision", "recall", "accuracy", "f1_score"]
@@ -108,13 +111,28 @@ def plot_metrics(paths):
 
 # Beispielaufruf
 # size = "tiny"
-input1= "Modeltiny_nTrain1"
-input2= "Modeltiny_nTrain2"
-input3= "Modeltiny_nTrain3"
-input4= "Modeltiny_nTrain4"
-input5= "Modeltiny_nTrain5"
-input6= "Modeltiny_nTrain6"
-input7= "Modeltiny_nTrain7"
+# input1= "Modelcustom_nTrain1"
+# input2= "Modelcustom_nTrain2"
+# input3= "Modelcustom_nTrain3"
+# input4= "Modelcustom_nTrain4"
+# input5= "Modelcustom_nTrain5"
+# input6= "Modelcustom_nTrain6"
+# input7= "Modelcustom_nTrain7"
 
-paths = [input1, input2, input3, input4, input5, input6, input7]
+# input1 = "Modeltiny_nTrain6"
+# input2 = "Modelsmall_nTrain6"
+# input3 = "Modelbase-plus_nTrain6"
+# input4 = "Modellarge_nTrain6"
+
+input1 = "Modeltiny_nTrain5"
+input2 = "Modelsmall_nTrain5"
+input3 = "Modelbase-plus_nTrain5"
+input4 = "Modellarge_nTrain5"
+input5 = "Modelcustom_nTrain5"
+
+
+# paths = [input1, input2, input3, input4]
+# paths = [input1, input2, input3, input4, input5, input6, input7]
+paths = [input1, input2, input3, input4, input5]
+
 plot_metrics(paths)

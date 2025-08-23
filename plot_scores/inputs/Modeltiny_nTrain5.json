@@ -1,30 +1,18 @@
 {
-  "timestamp": "2025-07-05T14:04:23",
+  "timestamp": "2025-07-06T17:38:28",
   "model_size": "tiny",
   "n_train": 5,
   "seq_folder": "sequence_to_test_1",
   "masks_folder": "tiny_n5",
   "expected_total": 20,
-  "found_total": 4,
-  "true_positives": 3,
+  "found_total": 3,
+  "true_positives": 2,
   "true_negatives": 20,
-  "false_negatives": 17,
+  "false_negatives": 18,
   "false_positives": 1,
   "per_image": [
     {
-      "img_name": "1128327637671443.jpg",
-      "expected": true,
-      "found": true,
-      "type": "tp"
-    },
-    {
       "img_name": "1150488025378390.jpg",
-      "expected": true,
-      "found": false,
-      "type": "fn"
-    },
-    {
-      "img_name": "1168719240306654.jpg",
       "expected": true,
       "found": false,
       "type": "fn"
@@ -96,6 +84,12 @@
       "type": "fn"
     },
     {
+      "img_name": "228555592368313.jpg",
+      "expected": true,
+      "found": false,
+      "type": "fn"
+    },
+    {
       "img_name": "264710655348649.jpg",
       "expected": false,
       "found": false,
@@ -136,6 +130,12 @@
       "expected": false,
       "found": false,
       "type": "tn"
+    },
+    {
+      "img_name": "358071033113221.jpg",
+      "expected": true,
+      "found": false,
+      "type": "fn"
     },
     {
       "img_name": "459701678441749.jpg",
@@ -258,5 +258,5 @@
       "type": "tn"
     }
   ],
-  "runtime_seconds": 207.634
+  "runtime_seconds": 98.47
 }

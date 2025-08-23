@@ -1,9 +1,9 @@
 {
-  "timestamp": "2025-07-06T17:34:08",
-  "model_size": "tiny",
-  "n_train": 1,
+  "timestamp": "2025-07-07T00:28:05",
+  "model_size": "custom",
+  "n_train": 7,
   "seq_folder": "sequence_to_test_1",
-  "masks_folder": "tiny_n1",
+  "masks_folder": "custom_n7",
   "expected_total": 20,
   "found_total": 3,
   "true_positives": 3,
@@ -86,8 +86,8 @@
     {
       "img_name": "228555592368313.jpg",
       "expected": true,
-      "found": true,
-      "type": "tp"
+      "found": false,
+      "type": "fn"
     },
     {
       "img_name": "264710655348649.jpg",
@@ -134,8 +134,8 @@
     {
       "img_name": "358071033113221.jpg",
       "expected": true,
-      "found": false,
-      "type": "fn"
+      "found": true,
+      "type": "tp"
     },
     {
       "img_name": "459701678441749.jpg",
@@ -230,14 +230,14 @@
     {
       "img_name": "828536674427803.jpg",
       "expected": true,
-      "found": true,
-      "type": "tp"
+      "found": false,
+      "type": "fn"
     },
     {
       "img_name": "845409816378785.jpg",
       "expected": true,
-      "found": false,
-      "type": "fn"
+      "found": true,
+      "type": "tp"
     },
     {
       "img_name": "852574285611373.jpg",
@@ -258,5 +258,5 @@
       "type": "tn"
     }
   ],
-  "runtime_seconds": 39.424
+  "runtime_seconds": 122.961
 }

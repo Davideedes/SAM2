@@ -34,17 +34,23 @@ def calc_confusion_matrix(path):
 
 if __name__ == "__main__":
     # calc_confusion_matrix("input.json")
-    input1= "inputs/Modeltiny_nTrain1.json"
-    input2= "inputs/Modeltiny_nTrain2.json"
-    input3= "inputs/Modeltiny_nTrain3.json"
-    input4= "inputs/Modeltiny_nTrain4.json"
-    input5= "inputs/Modeltiny_nTrain5.json"
-    input6= "inputs/Modeltiny_nTrain6.json"
-    input7= "inputs/Modeltiny_nTrain7.json"
+    # input1= "inputs/Modelcustom_nTrain1.json"
+    # input2= "inputs/Modelcustom_nTrain2.json"
+    # input3= "inputs/Modelcustom_nTrain3.json"
+    # input4= "inputs/Modelcustom_nTrain4.json"
+    # input5= "inputs/Modelcustom_nTrain5.json"
+    # input6= "inputs/Modelcustom_nTrain6.json"
+    # input7= "inputs/Modelcustom_nTrain7.json"
+
+    input1 = "inputs/Modeltiny_nTrain5.json"
+    input2 = "inputs/Modelsmall_nTrain5.json"
+    input3 = "inputs/Modelbase-plus_nTrain5.json"
+    input4 = "inputs/Modellarge_nTrain5.json"
+
     calc_confusion_matrix(input1)
     calc_confusion_matrix(input2)
     calc_confusion_matrix(input3)
     calc_confusion_matrix(input4)
-    calc_confusion_matrix(input5)
-    calc_confusion_matrix(input6)
-    calc_confusion_matrix(input7)
+    # calc_confusion_matrix(input5)
+    # calc_confusion_matrix(input6)
+    # calc_confusion_matrix(input7)
