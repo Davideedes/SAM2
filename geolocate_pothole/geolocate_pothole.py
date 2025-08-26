@@ -1,6 +1,5 @@
 import json, math, numpy as np, cv2
 from pyproj import CRS, Transformer, Geod
-from lxml import etree as ET
 
 # -------------------------------------------------------------
 # helper: convert a world‑space vector to true‑north heading (°)
@@ -13,19 +12,57 @@ def cam_heading(wvec, east, north):
 # ──────────────────────────────────────────────
 # 1 ▸ read metadata & annotation
 # ──────────────────────────────────────────────
-meta = json.load(open("lokstedt.json"))
-root = ET.parse("annotations.xml").getroot()
-poly_txt = root.xpath('.//polygon[@label=\"pothole\"]')[0].get("points")
+meta = json.load(open("199931331957826.json"))
 
 # image size
 W, H = meta["width"], meta["height"]
 
 # ──────────────────────────────────────────────
-# 2 ▸ pixel position = centroid of the polygon
+# 1b ▸ load pothole mask (NPZ) & centroid
 # ──────────────────────────────────────────────
-pts = np.array([[float(x), float(y)] for x, y in
-                (p.split(",") for p in poly_txt.split(";"))])
-u, v = pts.mean(axis=0)
+# The annotation is now provided as a binary mask stored in an .npz file.
+# We expect the mask under the key 'mask', but fall back to the first array
+# if no such key exists.
+mask_npz = np.load("199931331957826.npz")
+mask = mask_npz["mask"] if "mask" in mask_npz.files else next(iter(mask_npz.values()))
+
+# ------------------------------------------------------------
+# normalise mask shape ▸ squeeze singleton channels & scale
+# ------------------------------------------------------------
+# Accept (H,W), (1,H,W), or (H,W,1) shaped masks.
+if mask.ndim == 3:
+    if mask.shape[0] == 1:          # (1, H, W)
+        mask = mask[0]
+    elif mask.shape[2] == 1:        # (H, W, 1)
+        mask = mask[..., 0]
+    else:
+        raise ValueError(f"Unexpected 3‑D mask shape {mask.shape}")
+elif mask.ndim != 2:
+    raise ValueError(f"Mask must be 2‑D; got shape {mask.shape}")
+
+h_m, w_m = mask.shape
+
+# Pixel coordinates of all pothole pixels (mask must be non‑zero / True)
+ys, xs = np.nonzero(mask)
+if xs.size == 0:
+    raise ValueError("Mask does not contain any pothole pixels")
+
+# Centroid in mask coordinates
+u_m, v_m = xs.mean(), ys.mean()
+
+# Scale centroid to full‑resolution image if necessary
+if (w_m, h_m) != (W, H):
+    scale_x = W / w_m
+    scale_y = H / h_m
+    u = u_m * scale_x
+    v = v_m * scale_y
+else:
+    u, v = u_m, v_m
+
+# ──────────────────────────────────────────────
+# 2 ▸ pixel position = centroid of the mask
+# ──────────────────────────────────────────────
+# (no additional code here, centroid already computed above)
 
 # ──────────────────────────────────────────────
 # 3a ▸ intrinsics and rotation (camera → world)

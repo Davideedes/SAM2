@@ -18,4 +18,31 @@ notebooks/videos
 output/*
 train_masks/*
 
+fetch_mpy/downloads/
+geolocate_pothole/133763585410017.json
+geolocate_pothole/133763585410017.npz
+geolocate_pothole/133763585410017.png
+geolocate_pothole/153687263398545.jpg
+geolocate_pothole/153687263398545.json
+geolocate_pothole/153687263398545.npz
+geolocate_pothole/199931331957826.jpg
+geolocate_pothole/199931331957826.json
+geolocate_pothole/199931331957826.npz
+geolocate_pothole/Schlagloch1.jpeg
+geolocate_pothole/ascii_conversion.sh
+geolocate_pothole/dem_intersection.py
+geolocate_pothole/dgm/
+geolocate_pothole/dgm1_hh_2020-03-29/
+geolocate_pothole/geo/
+geolocate_pothole/geolocate_pothole/
+geolocate_pothole/geolocate_potholes/
+geolocate_pothole/inspect_masks.py
+geolocate_pothole/test.py
+geolocate_pothole/train_mask_Schlagloch1.npz
+pothole_training_data/
+sam2.1_hiera_base_plus.pt
+sam2.1_hiera_large.pt
+sam2.1_hiera_small.pt
+sam2.1_hiera_tiny.pt
+
 
