@@ -17,5 +17,5 @@ florence2/florence2-base/*
 notebooks/videos
 output/*
 train_masks/*
-plot_scores/*
+
 
