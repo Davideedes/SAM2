@@ -9,7 +9,7 @@ results = model.predict(
     imgsz=1024,         
     conf=0.20,         
     iou=0.60,          
-    device="mps",          
+    device="mps", #change to 0 for gpu or 1 for cpu
     save=True,        
     save_txt=True      
 )
