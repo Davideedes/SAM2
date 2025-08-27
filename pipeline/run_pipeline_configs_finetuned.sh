@@ -5,7 +5,7 @@
 # bash pipeline/run_pipeline_configs_finetuned.sh
 
 
-set -euo pipefail
+# set -euo pipefail
 
 
 SEQ_FOLDER="pipeline/resources/sequence_to_test_1"

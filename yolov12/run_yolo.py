@@ -1,15 +1,39 @@
+# yolov12/run_yolo.py
 from ultralytics import YOLO
+from pathlib import Path
+import time
 
-# 1) Load your trained weights
-model = YOLO("yolov12/pothole_yolov12_google_colab_training/weights/best.pt")  # or the path printed in your run
+# Fixe Pfade relativ zum Repo-Root (Script liegt im Ordner 'yolov12')
+ROOT = Path(__file__).resolve().parents[1]
 
-# 2) Run on images, a folder, or a video
+WEIGHTS = ROOT / "yolov12/pothole_yolov12_google_colab_training/weights/best.pt"
+SOURCE  = ROOT / "pipeline/resources/sequence_to_test_1"
+PROJECT = ROOT / "pipeline/resources/yolo_runs"
+NAME    = f"pred_{time.strftime('%Y%m%d_%H%M%S')}_i1024_c0.2_u0.6"
+
+print("== YOLO run ==")
+print("cwd     :", Path().resolve())
+print("weights :", WEIGHTS, WEIGHTS.exists())
+print("source  :", SOURCE,  SOURCE.exists())
+print("project :", PROJECT)
+
+model = YOLO(str(WEIGHTS))
+
 results = model.predict(
-    source="pipeline/resources/input_pictures",
-    imgsz=1024,         
-    conf=0.20,         
-    iou=0.60,          
-    device="mps", #change to 0 for gpu or 1 for cpu
-    save=True,        
-    save_txt=True      
+    source=str(SOURCE),
+    imgsz=1024,
+    conf=0.20,
+    iou=0.60,
+    device=0,          # WSL+CUDA
+    half=True,
+    save=True,
+    save_txt=True,
+    save_conf=True,
+    project=str(PROJECT),
+    name=NAME,
+    exist_ok=True,
+    verbose=False
 )
+
+labels_dir = PROJECT / NAME / "labels"
+print("LABELS_DIR:", labels_dir)  # <== wird vom Runner geparst
