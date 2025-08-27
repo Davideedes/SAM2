@@ -7,7 +7,7 @@ import time
 ROOT = Path(__file__).resolve().parents[1]
 
 WEIGHTS = ROOT / "yolov12/pothole_yolov12_google_colab_training/weights/best.pt"
-SOURCE  = ROOT / "pipeline/resources/sequence_to_test_1"
+SOURCE  = ROOT / "pipeline/resources/sequence_to_test_2"
 PROJECT = ROOT / "pipeline/resources/yolo_runs"
 NAME    = f"pred_{time.strftime('%Y%m%d_%H%M%S')}_i1024_c0.2_u0.6"
 

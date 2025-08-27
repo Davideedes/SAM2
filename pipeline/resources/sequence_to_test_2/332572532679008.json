@@ -1,0 +1,27 @@
+{
+  "id": "332572532679008",
+  "thumb_original_url": "https://scontent-ham3-1.xx.fbcdn.net/m1/v/t6/An_ro6UfZWv1WhUuh-art2SeQJ6-mg94PEHDDiIhG-O2B3I280ZATG3ptYwb6mp7_fxt3X9tAbny4SELxFm0vUtnlC9GG_os0j8G4Ri48o53h5EJEyWWUB08q7mfY4TY3aWA6aegMILYNE3h4O36Sw?edm=AOnQwmMEAAAA&_nc_gid=kf-37rLXWoTLIqBlNudRhA&_nc_oc=AdkRRQwcsjJztzm-mjL7JF4_u_kdp8uj-t1LE98B60GTTn8xM4RLeXjWVrJ4W6B9V54I4Sq5GHomHYt62bWd_H8D&ccb=10-5&oh=00_AfN5HrvU9uoib6nt8lXZtzhSmmwMQUH8h04qZZ1hjXqEVA&oe=68845444&_nc_sid=201bca",
+  "width": 2704,
+  "height": 1520,
+  "computed_geometry": {
+    "type": "Point",
+    "coordinates": [
+      9.9463425455533,
+      53.551093996066
+    ]
+  },
+  "computed_compass_angle": 67.634844115074,
+  "captured_at": 1711189558000,
+  "computed_rotation": [
+    1.4092193258943,
+    -0.8938507326711,
+    0.94984110638921
+  ],
+  "camera_parameters": [
+    0.55690148697023,
+    -0.0014859905228534,
+    -0.001935411892427
+  ],
+  "computed_altitude": 3.8632456036285,
+  "altitude": 23.8884644767
+}

@@ -2,24 +2,35 @@
 set -euo pipefail
 
 # ============= USER-CONFIG ==========================
-SEQ_FOLDER="pipeline/resources/sequence_to_test_1"   # muss zu YOLOs SOURCE passen!
-SAM_MODELS=( tiny small base-plus large )
-# SAM_MODELS=( tiny )
-MASKS_BASE="pipeline/resources/generated_npz_masks_yolo2sam"
+# (Wird überschrieben, falls YOLO etwas anderes als Quelle loggt)
+SEQ_FOLDER="pipeline/resources/sequence_to_test_2"
+
+# Nur die gewünschten SAM-Modelle laufen lassen
+SAM_MODELS=( tiny )
+
+MASKS_BASE="pipeline/resources/generated_npz_masks_yolo2sam/tiny"
 MAX_SIDE=0
+
 USE_CUSTOM_SAM=false
 SAM_CFG_PATH="configs/sam2.1/sam2.1_hiera_t.yaml"
 SAM_CKPT_PATH="checkpoints/sam2.1_hiera_tiny.pt"
+
+# ---- GT-Masken & IoU-Settings ----
+GT_MASK_DIR="pipeline/resources/sequence_to_test_2_npz_masks_ground_truth"
+GT_PREFIX="train_mask_"
+IOU_THR=0.3
+MIN_PIXELS=1000
 # ====================================================
 
 echo "=========================================================="
 echo "➡️  YOLO: nutze dein Script yolov12/run_yolo.py"
 echo "----------------------------------------------------------"
 
-# YOLO ausführen und die 'LABELS_DIR:'-Zeile abfangen
+# YOLO ausführen und Log abfangen
 YOLO_LOG=$(python3 yolov12/run_yolo.py)
 echo "$YOLO_LOG"
 
+# LABELS_DIR herausziehen
 LABELS_DIR=$(echo "$YOLO_LOG" | awk -F': ' '/^LABELS_DIR:/ {print $2; exit}')
 if [ -z "${LABELS_DIR:-}" ] || [ ! -d "$LABELS_DIR" ]; then
   echo "❌ Konnte LABELS_DIR nicht finden."
@@ -29,6 +40,33 @@ if [ -z "${LABELS_DIR:-}" ] || [ ! -d "$LABELS_DIR" ]; then
   exit 1
 fi
 echo "✅ Labels gefunden: $LABELS_DIR"
+
+# SOURCE/SEQ-Folder robust aus dem YOLO-Log holen
+# 1) Bevorzugt 'SOURCE_DIR:' (falls dein run_yolo.py das loggt)
+SEQ_FROM_LOG=$(echo "$YOLO_LOG" | awk -F': ' '/^SOURCE_DIR:/ {print $2; exit}')
+# 2) Fallback: Zeile, die mit 'source' beginnt und dann den Pfad enthält (Format: 'source  : <pfad> True')
+if [ -z "${SEQ_FROM_LOG:-}" ]; then
+  SEQ_FROM_LOG=$(echo "$YOLO_LOG" | awk '/^source/ {print $3; exit}')
+fi
+# Wenn gefunden und Verzeichnis existiert → SEQ_FOLDER überschreiben
+if [ -n "${SEQ_FROM_LOG:-}" ] && [ -d "$SEQ_FROM_LOG" ]; then
+  SEQ_FOLDER="$SEQ_FROM_LOG"
+fi
+
+if [ ! -d "$SEQ_FOLDER" ]; then
+  echo "❌ SEQ_FOLDER existiert nicht: $SEQ_FOLDER"
+  exit 1
+fi
+echo "📁 SEQ_FOLDER (Bilder für SAM2): $SEQ_FOLDER"
+
+# Eval-Argumente für cli_yolo2sam zusammenstellen
+EXTRA_EVAL_ARGS=( --iou-thr "${IOU_THR}" --min-pixels "${MIN_PIXELS}" --gt-prefix "${GT_PREFIX}" )
+if [ -n "${GT_MASK_DIR}" ] && [ -d "${GT_MASK_DIR}" ]; then
+  EXTRA_EVAL_ARGS+=( --gt-mask-dir "${GT_MASK_DIR}" )
+  echo "ℹ️  GT-Masken werden für IoU/Lokalisierung genutzt aus: ${GT_MASK_DIR} (Prefix: ${GT_PREFIX})"
+else
+  echo "ℹ️  Keine GT-Masken (oder Ordner nicht vorhanden) – es wird nur Bild-TP/TN/FP/FN geloggt."
+fi
 
 echo
 echo "=========================================================="
@@ -46,14 +84,16 @@ for MODEL in "${SAM_MODELS[@]}"; do
       --masks-folder "${MASKS_FOLDER}" \
       --cfg-path     "${SAM_CFG_PATH}" \
       --ckpt-path    "${SAM_CKPT_PATH}" \
-      --max-side     "${MAX_SIDE}"
+      --max-side     "${MAX_SIDE}" \
+      "${EXTRA_EVAL_ARGS[@]}"
   else
     python -m pipeline.cli_yolo2sam \
       --model-size   "${MODEL}" \
       --seq-folder   "${SEQ_FOLDER}" \
       --labels-folder "${LABELS_DIR}" \
       --masks-folder "${MASKS_FOLDER}" \
-      --max-side     "${MAX_SIDE}"
+      --max-side     "${MAX_SIDE}" \
+      "${EXTRA_EVAL_ARGS[@]}"
   fi
   echo "✅ Fertig: SAM2 ${MODEL} → ${MASKS_FOLDER}"
 done
