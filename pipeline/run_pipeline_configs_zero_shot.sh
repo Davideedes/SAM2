@@ -9,9 +9,9 @@ set -euo pipefail
 
 # ===================== USER-CONFIG =====================
 SEQ_FOLDER="pipeline/resources/sequence_to_test_2"
-MASKS_BASE="pipeline/resources/generated_npz_masks_from_run"
-MODELS=( tiny small base-plus large )
-MODELS=( tiny )
+MASKS_BASE="pipeline/resources/generated_npz_masks_from_run_only_sam_sequence2_new"
+# MODELS=( tiny small base-plus large )
+MODELS=(base-plus large )
 
 # ---- NEU: optionale GT-Masken & IoU-Settings ----
 GT_MASK_DIR="pipeline/resources/sequence_to_test_2_npz_masks_ground_truth"  # "" lassen oder Ordner weglassen, wenn keine GT vorhanden

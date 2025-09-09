@@ -5,10 +5,10 @@ set -euo pipefail
 # (Wird überschrieben, falls YOLO etwas anderes als Quelle loggt)
 SEQ_FOLDER="pipeline/resources/sequence_to_test_2"
 
-# Nur die gewünschten SAM-Modelle laufen lassen
-SAM_MODELS=( tiny )
+# Alle gewünschten SAM-Modelle (werden nacheinander ausgeführt)
+MODELS=( tiny small base-plus large )
 
-MASKS_BASE="pipeline/resources/generated_npz_masks_yolo2sam/tiny"
+MASKS_BASE="pipeline/resources/generated_npz_masks_yolo2sam_sequence2_new"
 MAX_SIDE=0
 
 USE_CUSTOM_SAM=false
@@ -26,7 +26,7 @@ echo "=========================================================="
 echo "➡️  YOLO: nutze dein Script yolov12/run_yolo.py"
 echo "----------------------------------------------------------"
 
-# YOLO ausführen und Log abfangen
+# YOLO ausführen und Log abfangen (nur EINMAL)
 YOLO_LOG=$(python3 yolov12/run_yolo.py)
 echo "$YOLO_LOG"
 
@@ -72,27 +72,29 @@ echo
 echo "=========================================================="
 echo "➡️  SAM2: Segmentiere mit Box-Prompts aus: ${LABELS_DIR}"
 echo "----------------------------------------------------------"
-for MODEL in "${SAM_MODELS[@]}"; do
+
+# WICHTIG: Ein Durchlauf über ALLE Modelle
+for MODEL in "${MODELS[@]}"; do
   MASKS_FOLDER="${MASKS_BASE}/${MODEL}"
   mkdir -p "${MASKS_FOLDER}"
   echo "---- SAM2 Run: model_size=${MODEL} ----"
   if [ "${USE_CUSTOM_SAM}" = true ]; then
     python -m pipeline.cli_yolo2sam \
       --model-size custom \
-      --seq-folder   "${SEQ_FOLDER}" \
+      --seq-folder    "${SEQ_FOLDER}" \
       --labels-folder "${LABELS_DIR}" \
-      --masks-folder "${MASKS_FOLDER}" \
-      --cfg-path     "${SAM_CFG_PATH}" \
-      --ckpt-path    "${SAM_CKPT_PATH}" \
-      --max-side     "${MAX_SIDE}" \
+      --masks-folder  "${MASKS_FOLDER}" \
+      --cfg-path      "${SAM_CFG_PATH}" \
+      --ckpt-path     "${SAM_CKPT_PATH}" \
+      --max-side      "${MAX_SIDE}" \
       "${EXTRA_EVAL_ARGS[@]}"
   else
     python -m pipeline.cli_yolo2sam \
-      --model-size   "${MODEL}" \
-      --seq-folder   "${SEQ_FOLDER}" \
+      --model-size    "${MODEL}" \
+      --seq-folder    "${SEQ_FOLDER}" \
       --labels-folder "${LABELS_DIR}" \
-      --masks-folder "${MASKS_FOLDER}" \
-      --max-side     "${MAX_SIDE}" \
+      --masks-folder  "${MASKS_FOLDER}" \
+      --max-side      "${MAX_SIDE}" \
       "${EXTRA_EVAL_ARGS[@]}"
   fi
   echo "✅ Fertig: SAM2 ${MODEL} → ${MASKS_FOLDER}"

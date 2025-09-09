@@ -1,0 +1,348 @@
+{
+  "timestamp": "2025-09-09T16:32:19",
+  "model_size": "small",
+  "n_train": 3,
+  "seq_folder": "sequence_to_test_2",
+  "masks_folder": "small_n3",
+  "expected_total": 20,
+  "found_total": 0,
+  "true_positives": 0,
+  "true_negatives": 20,
+  "false_negatives": 20,
+  "false_positives": 0,
+  "gt_mask_dir": "pipeline/resources/sequence_to_test_2_npz_masks_ground_truth",
+  "gt_prefix": "train_mask_",
+  "iou_threshold": 0.5,
+  "min_pixels": 1000,
+  "loc_true_positives": 0,
+  "loc_false_negatives": 20,
+  "pred_with_mask": 0,
+  "iou_sum": 0.0,
+  "iou_count": 20,
+  "per_image": [
+    {
+      "img_name": "1111069576877912.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "1126204155244080.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "1158166624986980.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "1329064107777798.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "1386705731964492.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "138968111556284.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "1403040837273346.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "1459054561349698.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "1520816164937345.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "1561436211152102.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "1694840138044306.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "188039513170850.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "1886098308510729.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "195840622387009.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "219314743337342.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "234670246334140.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "2541825119312059.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "262396380172162.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "318777479617071.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "3204037906584852.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "322906287072286.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "332572532679008.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "334119098140734.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "3593379174257049.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "409831751768396.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "437509901505971.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "465491958081645.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "468673947552921.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "473302127088019.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "495230658777622.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "694889785039636.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "747214430502241.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "787411643292381.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "801688267152464.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "829308255222305.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "846320023929767.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "908559296673026.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    },
+    {
+      "img_name": "926528728944678.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "944437527227035.jpg",
+      "expected": false,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": null,
+      "loc_ok": false
+    },
+    {
+      "img_name": "994877221128635.jpg",
+      "expected": true,
+      "found": false,
+      "n_objects": 1,
+      "iou_max": 0.0,
+      "loc_ok": false
+    }
+  ],
+  "runtime_seconds": 528.359,
+  "mean_iou_gt_pos": 0.0,
+  "loc_recall": 0.0,
+  "loc_precision": null
+}
