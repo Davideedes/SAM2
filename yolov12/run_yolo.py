@@ -36,4 +36,4 @@ results = model.predict(
 )
 
 labels_dir = PROJECT / NAME / "labels"
-print("LABELS_DIR:", labels_dir)  # <== wird vom Runner geparst
+print("LABELS_DIR:", labels_dir)

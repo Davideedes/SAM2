@@ -141,12 +141,16 @@ def _update_metrics_multiids(log:dict, img_name:str, segs:dict, masks_folder:Pat
     elif not exp and found:  log["false_positives"] += 1
     else:                    log["true_negatives"]  += 1
 
-def _write_log(log:dict, model_size:str):
-    ts = log["timestamp"].replace(":","-").replace("T","_")
+def _write_log(log: dict, model_size: str):
+    ts = log["timestamp"].replace(":", "-").replace("T", "_")
     name = f"Model{model_size}_YOLO2SAM_{ts}.json"
-    with open(LOG_DIR/name,"w",encoding="utf-8") as fh:
+
+    log_dir = LOG_DIR / "yolo_and_sam"   # <<< NEU: eigener Unterordner
+    log_dir.mkdir(parents=True, exist_ok=True)
+
+    with open(log_dir / name, "w", encoding="utf-8") as fh:
         json.dump(log, fh, indent=2)
-    print("💾 Log gespeichert:", LOG_DIR/name)
+    print("💾 Log gespeichert:", log_dir / name)
 
 # ---------- Hauptlauf mit Lokalisation ----------
 def run_yolo2sam(
