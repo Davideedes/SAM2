@@ -13,15 +13,26 @@ import requests
 # –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 # 0.  Define the set of images to fetch (sequence → [image IDs])
 # –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# SEQUENCE_AND_IMAGE_KEYS = {
+#     "IdQx7wJbzls_1SGjJceIqw": ["801688267152464"],
+#     "AgKwDT01j4lQOfCcpx3dI5": [
+#         "437509901505971", "495230658777622", "694889785039636",
+#         "994877221128635", "1158166624986980",
+#     ],
+#     "Mm0ox3ISOJ4i68cE17CzvG": ["1329064107777798"],
+#     "K1-GjltYRoa_Ua67YCMxfg": ["188039513170850"],
+#     "y6znehdp01gv1cfqhxlm2s": ["1520816164937345"],
+# }
 SEQUENCE_AND_IMAGE_KEYS = {
-    "IdQx7wJbzls_1SGjJceIqw": ["801688267152464"],
-    "AgKwDT01j4lQOfCcpx3dI5": [
-        "437509901505971", "495230658777622", "694889785039636",
-        "994877221128635", "1158166624986980",
-    ],
-    "Mm0ox3ISOJ4i68cE17CzvG": ["1329064107777798"],
-    "K1-GjltYRoa_Ua67YCMxfg": ["188039513170850"],
-    "y6znehdp01gv1cfqhxlm2s": ["1520816164937345"],
+    "LzmRc7EuQBWYgMiQYxa55A": ["318777479617071"],
+    "9vc32hajx0nvlm587djfrz": ["468673947552921","465491958081645","219314743337342"],
+    "qguobb95xtkik59tpd3fzu": ["334119098140734","195840622387009"],
+    "ds2q5f0furwlk4hxtni1n4": ["138968111556284"],
+    "hzpj6dghmxiiii9u3333ok": ["473302127088019"],
+    "fTBZyU0XzLE8FrC15HvQg6": ["908559296673026"],
+    "uYWlqjN7Vo0XSAIGdnZ5Hm" : ["829308255222305"],
+    "C3TbHjN0G5PfRwz7rtYsma" : ["3204037906584852"]
+    ###
 }
 
 FIELDS = ",".join([
