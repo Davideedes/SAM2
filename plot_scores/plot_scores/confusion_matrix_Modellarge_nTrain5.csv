@@ -1,0 +1,2 @@
+model_size,n_train,expected_total,true_positives,false_negatives,false_positives,true_negatives,precision,recall,accuracy,f1_score
+large,5,20,7,19,6,15,0.5384615384615384,0.2692307692307692,0.5365853658536586,0.3589743589743589
