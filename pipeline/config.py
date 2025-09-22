@@ -11,7 +11,7 @@ LOG_DIR.mkdir(exist_ok=True)
 
 
 def load_ground_truth() -> dict[str, bool]:
-    with open(RES / "ground_truth_config_seq2.json", "r") as fh:
+    with open(RES / "ground_truth_config.json", "r") as fh:
         return json.load(fh)
     
 def load_input_sample_pictures() -> list[str]:

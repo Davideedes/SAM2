@@ -267,7 +267,7 @@ def _write_log(log: dict):
     ts = log["timestamp"].replace(":", "-").replace("T", "_")
     name = f"Model{log['model_size']}_nTrain{log['n_train']}_{ts}.json"
 
-    log_dir = LOG_DIR / "only_sam"   # <<< NEU: eigener Unterordner
+    log_dir = LOG_DIR / "only_sam_seq1_new_2209"   # <<< NEU: eigener Unterordner
     log_dir.mkdir(parents=True, exist_ok=True)
 
     with open(log_dir / name, "w", encoding="utf-8") as fh:

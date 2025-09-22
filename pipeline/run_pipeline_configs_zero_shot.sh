@@ -8,13 +8,13 @@ set -euo pipefail
 # bash pipeline/run_pipeline_configs_zero_shot.sh
 
 # ===================== USER-CONFIG =====================
-SEQ_FOLDER="pipeline/resources/sequence_to_test_2"
-MASKS_BASE="pipeline/resources/generated_npz_masks_from_run_only_sam_sequence2_new"
-# MODELS=( tiny small base-plus large )
-MODELS=(base-plus large )
+SEQ_FOLDER="pipeline/resources/sequence_to_test_1"
+MASKS_BASE="pipeline/resources/generated_npz_masks_from_run_only_sam_sequence1_new_new"
+MODELS=( tiny small base-plus large )
+# MODELS=( tiny small )
 
 # ---- NEU: optionale GT-Masken & IoU-Settings ----
-GT_MASK_DIR="pipeline/resources/sequence_to_test_2_npz_masks_ground_truth"  # "" lassen oder Ordner weglassen, wenn keine GT vorhanden
+GT_MASK_DIR="pipeline/resources/sequence_to_test_1_npz_masks_ground_truth"  # "" lassen oder Ordner weglassen, wenn keine GT vorhanden
 GT_PREFIX="train_mask_"     # Prefix der GT-Dateien (z.B. train_mask_12345.npz)
 IOU_THR=0.5                 # IoU-Schwelle für 'lokal korrekt'
 MIN_PIXELS=1000             # segmentierte Masken kleiner als N Pixel ignorieren
