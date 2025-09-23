@@ -4,7 +4,7 @@ import json
 import matplotlib.pyplot as plt
 
 # Ordner mit den JSON-Dateien
-json_dir = r"pipeline\logs\yolo_and_sam"
+json_dir = r"pipeline/logs/only_sam_finetune_2309"
 
 # Alle JSON-Dateien im Ordner finden
 json_files = [os.path.join(json_dir, f) for f in os.listdir(json_dir) if f.endswith(".json")]
@@ -60,5 +60,6 @@ plt.ylim(0, 1)
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("modelsize_comparison.png")
+plt.savefig(os.path.join(json_dir, "modelsize_comparison.png"))
+
 plt.show()

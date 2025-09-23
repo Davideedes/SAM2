@@ -1,7 +1,7 @@
 import json
 import os
 
-from sklearn import pipeline
+#from sklearn import pipeline
 
 def calc_confusion_matrix(path):
     # JSON-Datei laden
@@ -49,13 +49,13 @@ if __name__ == "__main__":
 
 
 
-    input1 = "pipeline\logs\only_sam\Modelsmall_nTrain1_2025-09-09_16-29-37.json"
-    input2 = "pipeline\logs\only_sam\Modelsmall_nTrain2_2025-09-09_16-30-31.json"
-    input3 = "pipeline\logs\only_sam\Modelsmall_nTrain3_2025-09-09_16-32-19.json"
-    input4 = "pipeline\logs\only_sam\Modelsmall_nTrain4_2025-09-09_16-41-10.json"
-    input5 = "pipeline\logs\only_sam\Modelsmall_nTrain5_2025-09-09_16-52-11.json"
-    input6 = "pipeline\logs\only_sam\Modelsmall_nTrain6_2025-09-09_17-05-34.json"
-    input7 = "pipeline\logs\only_sam\Modelsmall_nTrain7_2025-09-09_17-21-16.json"
+    input1 = "../pipeline/logs/only_sam_finetune_2309/Modelcustom_nTrain1_2025-09-23_21-23-26.json"
+    input2 = "../pipeline/logs/only_sam_finetune_2309/Modelcustom_nTrain2_2025-09-23_21-24-14.json"
+    input3 = "../pipeline/logs/only_sam_finetune_2309/Modelcustom_nTrain3_2025-09-23_21-25-47.json"
+    input4 = "../pipeline/logs/only_sam_finetune_2309/Modelcustom_nTrain4_2025-09-23_21-27-53.json"
+    input5 = "../pipeline/logs/only_sam_finetune_2309/Modelcustom_nTrain5_2025-09-23_21-30-30.json"
+    input6 = "../pipeline/logs/only_sam_finetune_2309/Modelcustom_nTrain6_2025-09-23_21-33-39.json"
+    input7 = "../pipeline/logs/only_sam_finetune_2309/Modelcustom_nTrain7_2025-09-23_21-37-23.json"
 
     calc_confusion_matrix(input1)
     calc_confusion_matrix(input2)

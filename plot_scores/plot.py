@@ -138,18 +138,13 @@ def plot_metrics(paths):
     # input7 = "pipeline\logs\only_sam\Modelsmall_nTrain7_2025-09-09_17-21-16.json"
 
 
-input1 = "Modelsmall_nTrain1_2025-09-09_16-29-37"
-input2 = "Modelsmall_nTrain2_2025-09-09_16-30-31"
-input3 = "Modelsmall_nTrain3_2025-09-09_16-32-19"
-input4 = "Modelsmall_nTrain4_2025-09-09_16-41-10"
-input5 = "Modelsmall_nTrain5_2025-09-09_16-52-11"
-input6 = "Modelsmall_nTrain6_2025-09-09_17-05-34"
-input7 = "Modelsmall_nTrain7_2025-09-09_17-21-16"
-# input5 = "Modelcustom_nTrain5"
+input1 = "Modelcustom_nTrain1_2025-09-23_21-23-26"
+input2 = "Modelcustom_nTrain2_2025-09-23_21-24-14"
+input3 = "Modelcustom_nTrain3_2025-09-23_21-25-47"
+input4 = "Modelcustom_nTrain4_2025-09-23_21-27-53"
+input5 = "Modelcustom_nTrain5_2025-09-23_21-30-30"
+input6 = "Modelcustom_nTrain6_2025-09-23_21-33-39"
+input7 = "Modelcustom_nTrain7_2025-09-23_21-37-23"
 
-
-# paths = [input1, input2, input3, input4]
 paths = [input1, input2, input3, input4, input5, input6, input7]
-# paths = [input1, input2, input3, input4]
-
 plot_metrics(paths)
