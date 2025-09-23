@@ -8,7 +8,7 @@ SEQ_FOLDER="pipeline/resources/sequence_to_test_2"
 # Alle gewünschten SAM-Modelle (werden nacheinander ausgeführt)
 MODELS=( tiny small base-plus large )
 
-MASKS_BASE="pipeline/resources/generated_npz_masks_yolo2sam_sequence2_new"
+MASKS_BASE="pipeline/resources/temp"
 MAX_SIDE=0
 
 USE_CUSTOM_SAM=false
@@ -18,7 +18,7 @@ SAM_CKPT_PATH="checkpoints/sam2.1_hiera_tiny.pt"
 # ---- GT-Masken & IoU-Settings ----
 GT_MASK_DIR="pipeline/resources/sequence_to_test_2_npz_masks_ground_truth"
 GT_PREFIX="train_mask_"
-IOU_THR=0.3
+IOU_THR=0.7
 MIN_PIXELS=1000
 # ====================================================
 
