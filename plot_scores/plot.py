@@ -137,16 +137,52 @@ def plot_metrics(paths):
     # input6 = "pipeline\logs\only_sam\Modelsmall_nTrain6_2025-09-09_17-05-34.json"
     # input7 = "pipeline\logs\only_sam\Modelsmall_nTrain7_2025-09-09_17-21-16.json"
 
+    #     input1 = "pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain1_2025-09-22_19-51-34.json"
+    # input2 = "pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain2_2025-09-22_19-53-18.json"
+    # input3 = "pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain3_2025-09-22_19-56-45.json"
+    # input4 = "pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain4_2025-09-22_20-01-32.json"
+    # input5 = "pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain5_2025-09-22_20-07-29.json"
+    # input6 = "pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain6_2025-09-22_20-14-42.json"
+    # input7 = "pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain7_2025-09-22_20-23-12.json"
 
-input1 = "Modelsmall_nTrain1_2025-09-09_16-29-37"
-input2 = "Modelsmall_nTrain2_2025-09-09_16-30-31"
-input3 = "Modelsmall_nTrain3_2025-09-09_16-32-19"
-input4 = "Modelsmall_nTrain4_2025-09-09_16-41-10"
-input5 = "Modelsmall_nTrain5_2025-09-09_16-52-11"
-input6 = "Modelsmall_nTrain6_2025-09-09_17-05-34"
-input7 = "Modelsmall_nTrain7_2025-09-09_17-21-16"
+    
+
+
+# input1 = "Modelbase-plus_nTrain1_2025-09-22_19-51-34"
+# input2 = "Modelbase-plus_nTrain2_2025-09-22_19-53-18"
+# input3 = "Modelbase-plus_nTrain3_2025-09-22_19-56-45"
+# input4 = "Modelbase-plus_nTrain4_2025-09-22_20-01-32"
+# input5 = "Modelbase-plus_nTrain5_2025-09-22_20-07-29"
+# input6 = "Modelbase-plus_nTrain6_2025-09-22_20-14-42"
+# input7 = "Modelbase-plus_nTrain7_2025-09-22_20-23-12"
 # input5 = "Modelcustom_nTrain5"
 
+    # input1 = "pipeline\logs\jannik_new_standard_settings\Modeltiny_nTrain6_2025-09-23_11-06-02.json"
+    # input2 = "pipeline\logs\jannik_new_standard_settings\Modelsmall_nTrain6_2025-09-23_11-16-39.json"
+    # input3 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain6_2025-09-23_11-29-31.json"
+    # input4 = "pipeline\logs\jannik_new_standard_settings\Modellarge_nTrain6_2025-09-23_11-49-56.json"
+# Jannik Model size
+# input1 = "Modeltiny_nTrain6_2025-09-23_11-06-02"
+# input2 = "Modelsmall_nTrain6_2025-09-23_11-16-39"
+# input3 = "Modelbase-plus_nTrain6_2025-09-23_11-29-31"
+# input4 = "Modellarge_nTrain6_2025-09-23_11-49-56"
+
+# Jannik nTrain base plus 
+    # input1 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain1_2025-09-23_11-21-11.json"
+    # input2 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain2_2025-09-23_11-22-02.json"
+    # input3 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain3_2025-09-23_11-23-21.json"
+    # input4 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain4_2025-09-23_11-25-02.json"
+    # input5 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain5_2025-09-23_11-27-04.json"
+    # input6 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain6_2025-09-23_11-29-31.json"
+    # input7 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain7_2025-09-23_11-32-17.json"
+
+input1= "Modelbase-plus_nTrain1_2025-09-23_11-21-11"
+input2= "Modelbase-plus_nTrain2_2025-09-23_11-22-02"
+input3= "Modelbase-plus_nTrain3_2025-09-23_11-23-21"
+input4= "Modelbase-plus_nTrain4_2025-09-23_11-25-02"
+input5= "Modelbase-plus_nTrain5_2025-09-23_11-27-04"
+input6= "Modelbase-plus_nTrain6_2025-09-23_11-29-31"
+input7= "Modelbase-plus_nTrain7_2025-09-23_11-32-17"
 
 # paths = [input1, input2, input3, input4]
 paths = [input1, input2, input3, input4, input5, input6, input7]

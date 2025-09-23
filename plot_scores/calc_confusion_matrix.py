@@ -49,13 +49,56 @@ if __name__ == "__main__":
 
 
 
-    input1 = "pipeline\logs\only_sam\Modelsmall_nTrain1_2025-09-09_16-29-37.json"
-    input2 = "pipeline\logs\only_sam\Modelsmall_nTrain2_2025-09-09_16-30-31.json"
-    input3 = "pipeline\logs\only_sam\Modelsmall_nTrain3_2025-09-09_16-32-19.json"
-    input4 = "pipeline\logs\only_sam\Modelsmall_nTrain4_2025-09-09_16-41-10.json"
-    input5 = "pipeline\logs\only_sam\Modelsmall_nTrain5_2025-09-09_16-52-11.json"
-    input6 = "pipeline\logs\only_sam\Modelsmall_nTrain6_2025-09-09_17-05-34.json"
-    input7 = "pipeline\logs\only_sam\Modelsmall_nTrain7_2025-09-09_17-21-16.json"
+    # input1 = "pipeline\logs\only_sam\Modelsmall_nTrain1_2025-09-09_16-29-37.json"
+    # input2 = "pipeline\logs\only_sam\Modelsmall_nTrain2_2025-09-09_16-30-31.json"
+    # input3 = "pipeline\logs\only_sam\Modelsmall_nTrain3_2025-09-09_16-32-19.json"
+    # input4 = "pipeline\logs\only_sam\Modelsmall_nTrain4_2025-09-09_16-41-10.json"
+    # input5 = "pipeline\logs\only_sam\Modelsmall_nTrain5_2025-09-09_16-52-11.json"
+    # input6 = "pipeline\logs\only_sam\Modelsmall_nTrain6_2025-09-09_17-05-34.json"
+    # input7 = "pipeline\logs\only_sam\Modelsmall_nTrain7_2025-09-09_17-21-16.json"
+
+# 
+# pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain3_2025-09-22_19-56-45.json
+# pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain4_2025-09-22_20-01-32.json
+# pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain5_2025-09-22_20-07-29.json
+# pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain6_2025-09-22_20-14-42.json
+# pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain7_2025-09-22_20-23-12.json
+    # input1 = "pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain1_2025-09-22_19-51-34.json"
+    # input2 = "pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain2_2025-09-22_19-53-18.json"
+    # input3 = "pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain3_2025-09-22_19-56-45.json"
+    # input4 = "pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain4_2025-09-22_20-01-32.json"
+    # input5 = "pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain5_2025-09-22_20-07-29.json"
+    # input6 = "pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain6_2025-09-22_20-14-42.json"
+    # input7 = "pipeline\logs\only_sam_seq1_new_2209\Modelbase-plus_nTrain7_2025-09-22_20-23-12.json"
+#
+#
+# Jannik new standard settings 
+# pipeline\logs\jannik_new_standard_settings\Modeltiny_nTrain6_2025-09-23_11-06-02.json
+# pipeline\logs\jannik_new_standard_settings\Modelsmall_nTrain6_2025-09-23_11-16-39.json
+# pipeline\logs\jannik_new_standard_settings\Modellarge_nTrain6_2025-09-23_11-49-56.json
+# pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain6_2025-09-23_11-29-31.json
+
+    # input1 = "pipeline\logs\jannik_new_standard_settings\Modeltiny_nTrain6_2025-09-23_11-06-02.json"
+    # input2 = "pipeline\logs\jannik_new_standard_settings\Modelsmall_nTrain6_2025-09-23_11-16-39.json"
+    # input3 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain6_2025-09-23_11-29-31.json"
+    # input4 = "pipeline\logs\jannik_new_standard_settings\Modellarge_nTrain6_2025-09-23_11-49-56.json"
+
+# Base plus 
+# pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain1_2025-09-23_11-21-11.json
+# pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain2_2025-09-23_11-22-02.json
+# pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain3_2025-09-23_11-23-21.json
+# pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain4_2025-09-23_11-25-02.json
+# pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain5_2025-09-23_11-27-04.json
+# pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain6_2025-09-23_11-29-31.json
+# pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain7_2025-09-23_11-32-17.json
+
+    input1 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain1_2025-09-23_11-21-11.json"
+    input2 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain2_2025-09-23_11-22-02.json"
+    input3 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain3_2025-09-23_11-23-21.json"
+    input4 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain4_2025-09-23_11-25-02.json"
+    input5 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain5_2025-09-23_11-27-04.json"
+    input6 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain6_2025-09-23_11-29-31.json"
+    input7 = "pipeline\logs\jannik_new_standard_settings\Modelbase-plus_nTrain7_2025-09-23_11-32-17.json"
 
     calc_confusion_matrix(input1)
     calc_confusion_matrix(input2)
